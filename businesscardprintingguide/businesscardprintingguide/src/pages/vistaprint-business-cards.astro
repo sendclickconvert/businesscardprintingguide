@@ -1,0 +1,278 @@
+---
+import Base from '../layouts/Base.astro';
+import LeadForm from '../components/LeadForm.astro';
+
+const breadcrumbs = [
+  { name: "Business Card Printing Guide", url: "https://www.businesscardprintingguide.com" },
+  { name: "Vistaprint Business Cards", url: "https://www.businesscardprintingguide.com/vistaprint-business-cards/" }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Review",
+      "@id": "https://www.businesscardprintingguide.com/vistaprint-business-cards/#review",
+      "name": "Vistaprint Business Cards: Honest Review (2026)",
+      "description": "Is Vistaprint worth it for business cards? We compare quality, pricing, stock options, and when a local printer beats the online giant.",
+      "author": { "@type": "Organization", "name": "CRST", "url": "https://crst.net" },
+      "dateModified": "2026-02-01",
+      "datePublished": "2026-02-01",
+      "itemReviewed": {
+        "@type": "Product",
+        "name": "Vistaprint Business Cards",
+        "brand": { "@type": "Brand", "name": "Vistaprint" },
+        "description": "Online business card printing service by Vistaprint",
+        "offers": {
+          "@type": "AggregateOffer",
+          "lowPrice": "17",
+          "highPrice": "60",
+          "priceCurrency": "USD",
+          "offerCount": "3"
+        }
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "3.2",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.businesscardprintingguide.com/vistaprint-business-cards/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Vistaprint good quality for business cards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vistaprint uses 14pt stock as standard, which is thinner than the 16pt industry standard. Quality is acceptable for basic orders but color accuracy can vary run to run due to gang-run printing. For brand-sensitive work or premium finishes, a local printer delivers more consistent results."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does Vistaprint take to deliver business cards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard shipping takes 8–12 business days. Rush options are available but add $15–$35 to the order cost. For same-week turnaround, a local printer is a more reliable option."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is cheaper than Vistaprint for business cards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gotprint offers comparable or better quality at similar prices and is frequently recommended by designers over Vistaprint. For local Hudson Valley businesses, CRST offers competitive pricing with the advantage of free design review and 1–3 day turnaround."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Base
+  title="Vistaprint Business Cards: Honest Review (2026)"
+  description="Is Vistaprint worth it? We compare quality, pricing, stock options, and when a local Hudson Valley printer beats the online giant for business cards."
+  schema={schema}
+  breadcrumbs={breadcrumbs}
+>
+
+  <!-- Breadcrumb -->
+
+  <!-- CTA 1 Top banner SQEG min 3 CTAs per page -->
+  <div class="bg-gold/10 border-b border-gold/20">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm">
+      <p class="text-slate">Hudson Valley business? CRST prints <strong class="text-ink">16pt cards in 1-3 days</strong> with local pickup - free file review included.</p>
+      <a href="/get-a-quote/" class="flex-shrink-0 bg-ink text-paper px-4 py-1.5 rounded-sm text-xs font-semibold hover:bg-gold hover:text-ink transition-colors whitespace-nowrap">Get a Free Quote</a>
+    </div>
+  </div>
+
+  <div class="bg-paper border-b border-ink/10">
+    <div class="max-w-4xl mx-auto px-4 py-2 text-xs text-muted flex items-center gap-2">
+      <a href="/" class="hover:text-gold transition-colors">Business Card Printing Guide</a>
+      <span>→</span>
+      <span class="text-ink">Vistaprint Business Cards</span>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="bg-ink text-paper pt-12 pb-16 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, #c9a84c 0, #c9a84c 1px, transparent 0, transparent 50%); background-size: 12px 12px;"></div>
+    <div class="max-w-4xl mx-auto px-4 relative z-10">
+      <p class="text-gold text-xs font-semibold uppercase tracking-widest mb-3">Spoke Guide · Printer Comparison</p>
+      <h1 class="font-display text-4xl md:text-5xl leading-tight mb-4">
+        Vistaprint Business Cards:<br/><span class="text-gold italic">Honest Review</span> (2026)
+      </h1>
+      <p class="text-muted text-lg max-w-2xl leading-relaxed">
+        Vistaprint is the best-known name in online printing. But "best-known" isn't the same as "best." Here's what you actually get — and when to look elsewhere.
+      </p>
+    </div>
+  </section>
+
+  <!-- Key Takeaways -->
+  <section class="max-w-4xl mx-auto px-4 -mt-6 relative z-10">
+    <div class="bg-paper border border-gold/30 rounded-sm p-6 shadow-lg">
+      <h2 class="font-display text-xl text-ink mb-3 flex items-center gap-2">
+        <span class="w-6 h-6 bg-gold rounded-sm flex items-center justify-center text-ink text-xs font-bold">✓</span>
+        Key Takeaways
+      </h2>
+      <ul class="space-y-2 text-sm text-slate">
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Vistaprint is best for budget-conscious, high-volume, basic orders with flexible timelines.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Their standard stock (14pt) is noticeably thinner than the 16pt industry standard.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Pricing starts low but upsells (faster shipping, heavier stock, finishes) add up quickly.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Local printers beat Vistaprint on rush orders, color accuracy, and premium finishes.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Hudson Valley businesses: CRST offers free design review and 1–3 day local turnaround.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article class="max-w-4xl mx-auto px-4 py-12">
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-8">What Vistaprint Gets Right</h2>
+    <p class="text-slate leading-relaxed mb-4">
+      Let's give credit where it's due. Vistaprint built its reputation on genuine strengths: a massive template library (with thousands of design options), an intuitive ordering interface, and consistently low pricing on standard runs. For a first-time business owner who needs 250 cards quickly and doesn't have a designer, Vistaprint removes nearly all friction.
+    </p>
+    <p class="text-slate leading-relaxed mb-6">
+      Their flat-rate pricing model is also refreshing in an industry known for surprise fees. You know what you're paying before you check out — assuming you resist the upsell flow.
+    </p>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">The Quality Trade-Offs</h2>
+    <p class="text-slate leading-relaxed mb-4">
+      Vistaprint's standard business cards ship on 14pt coated stock. That's noticeably lighter than the 16pt that most professional printers use as their baseline — including dedicated online printers like <a href="/gotprint-business-cards/" class="text-gold hover:underline">Gotprint</a>, which includes 16pt as standard at comparable pricing. The difference is subtle in photographs but immediately apparent when you hold both in your hand. In a first-impression context — a networking event, a client handoff — that subtle difference signals something about your brand.
+    </p>
+    <p class="text-slate leading-relaxed mb-4">
+      Color accuracy is the other persistent criticism. Vistaprint uses gang-run printing, which means your job runs alongside dozens of others on the same press sheet, calibrated to an average. For simple layouts with large color blocks, this is usually fine. For brand-sensitive work with specific Pantone matches or subtle gradients, results can vary run to run.
+    </p>
+    <p class="text-slate leading-relaxed mb-6">
+      File prep matters too — if you're submitting a design for the first time, read our <a href="/print-business-cards/" class="text-gold hover:underline">business card file setup guide</a> before uploading. Bleed, resolution, and color mode errors are the most common causes of disappointing print results regardless of which printer you use.
+    </p>
+
+    <!-- Pricing Breakdown -->
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">Vistaprint Pricing: What You'll Actually Pay</h2>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-ink text-paper">
+            <th class="text-left px-4 py-3 font-semibold">Quantity</th>
+            <th class="text-left px-4 py-3 font-semibold">Listed Price</th>
+            <th class="text-left px-4 py-3 font-semibold">With Standard Shipping</th>
+            <th class="text-left px-4 py-3 font-semibold">Turnaround</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-ink/10">
+          {[
+            { qty: "250 cards", price: "$17–$25", total: "$32–$42", time: "8–12 days" },
+            { qty: "500 cards", price: "$25–$38", total: "$40–$56", time: "8–12 days" },
+            { qty: "1,000 cards", price: "$38–$60", total: "$55–$78", time: "8–12 days" },
+          ].map((r, i) => (
+            <tr class={i % 2 === 0 ? "bg-white" : "bg-paper"}>
+              <td class="px-4 py-3 font-medium text-ink">{r.qty}</td>
+              <td class="px-4 py-3 text-slate">{r.price}</td>
+              <td class="px-4 py-3 text-slate">{r.total}</td>
+              <td class="px-4 py-3 text-slate">{r.time}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-muted text-xs mb-8">Prices sourced from Vistaprint.com, February 2026. Subject to change. Rush shipping adds $15–$35.</p>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">When Vistaprint Makes Sense</h2>
+    <ul class="space-y-2 text-slate text-sm mb-6 ml-4">
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">✓</span> You need a large quantity (1,000+) on a tight budget with no rush</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">✓</span> Your design is simple and color accuracy isn't critical</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">✓</span> You're comfortable using their online designer and templates</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">✓</span> This is a secondary or temporary card while your brand is still evolving</li>
+    </ul>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">When to Choose a Local Printer Instead</h2>
+    <ul class="space-y-2 text-slate text-sm mb-6 ml-4">
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">→</span> You need cards within 24–72 hours</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">→</span> You have specific Pantone or brand colors that need consistency</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">→</span> You want 16pt or 18pt stock, soft-touch matte, spot UV, or foil</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">→</span> You want to hold a physical proof before committing to a full run</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">→</span> You're a Hudson Valley business that wants local pickup and a real relationship</li>
+    </ul>
+
+    <!-- Inline CTA -->
+    <div class="bg-ink text-paper rounded-sm p-6 my-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <p class="font-display text-xl text-paper mb-1">Get a local quote — often less than you think</p>
+        <p class="text-muted text-sm">CRST serves Ulster, Dutchess, and Orange Counties. Free design review included.</p>
+      </div>
+      <a href="/get-a-quote/" class="flex-shrink-0 bg-gold text-ink px-6 py-3 rounded-sm font-semibold text-sm hover:bg-gold-light transition-colors whitespace-nowrap">Get a Free Quote →</a>
+    </div>
+
+    <!-- Internal Links -->
+    <h2 class="font-display text-2xl text-ink mb-4 mt-10">More Business Card Guides</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      {[
+        { title: "Business Card Printing: The Complete Guide", url: "/" },
+        { title: "How to Print Business Cards: File Setup Guide", url: "/print-business-cards/" },
+        { title: "Gotprint Business Cards Review", url: "/gotprint-business-cards/" },
+        { title: "FedEx Business Card Printing", url: "/fedex-business-card-printing/" },
+      ].map(({ title, url }) => (
+        <a href={url} class="border border-ink/10 rounded-sm px-4 py-3 text-sm text-ink hover:border-gold/40 hover:text-gold transition-all bg-white">
+          {title} →
+        </a>
+      ))}
+    </div>
+
+
+    <!-- FAQ — visible for AI extraction and featured snippets -->
+    <h2 class="font-display text-3xl text-ink mb-6 mt-12">Frequently Asked Questions</h2>
+    <div class="space-y-4 mb-8">
+      {[
+        {
+          q: "Is Vistaprint good quality for business cards?",
+          a: "Vistaprint uses 14pt stock as standard — thinner than the 16pt industry standard. Quality is acceptable for basic orders but color accuracy varies run to run due to gang-run printing. For brand-sensitive work, premium finishes, or rush orders, a local printer delivers more consistent results."
+        },
+        {
+          q: "How long does Vistaprint take to deliver business cards?",
+          a: "Standard shipping takes 8–12 business days from order placement. Rush production options are available but add $15–$35 to the order cost and still require 2–5 days shipping on top. For same-week turnaround, a local printer is a more reliable option."
+        },
+        {
+          q: "What is cheaper than Vistaprint for business cards?",
+          a: "Gotprint offers comparable or better quality at similar prices and is frequently recommended by designers. For 1,000+ cards, both Gotprint and Gotprint deliver better per-card pricing than Vistaprint's base tiers."
+        },
+        {
+          q: "Does Vistaprint use 16pt cardstock?",
+          a: "No. Vistaprint's standard business cards are printed on 14pt coated stock. 16pt is available as a premium upgrade at an additional cost. Most local print shops and dedicated online printers like Gotprint include 16pt as their standard offering."
+        },
+      ].map(({ q, a }) => (
+        <div class="border border-ink/10 rounded-sm p-5 bg-white">
+          <h3 class="font-semibold text-ink mb-2 text-sm">{q}</h3>
+          <p class="text-slate text-sm leading-relaxed">{a}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Author E-E-A-T box -->
+    <div class="bg-ink text-paper rounded-sm p-6 flex flex-col sm:flex-row gap-5 items-start mt-8">
+      <div class="flex-shrink-0 w-14 h-14 bg-gold/20 rounded-sm flex items-center justify-center">
+        <span class="font-display text-gold text-xl font-bold">C</span>
+      </div>
+      <div>
+        <p class="font-semibold text-paper mb-1">Written by CRST — Cornerstone Services</p>
+        <p class="text-muted text-sm leading-relaxed">Direct mail and printing specialists serving the Hudson Valley since 2008. Headquartered in New Paltz, NY, serving Ulster, Dutchess, and Orange Counties.</p>
+        <div class="flex gap-4 mt-3 text-xs">
+          <a href="https://crst.net" class="text-gold hover:underline" target="_blank" rel="noopener">crst.net →</a>
+          <a href="/editorial-policy/" class="text-gold hover:underline">Editorial Policy →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6 pt-6 border-t border-ink/10 text-xs text-muted">
+      <p>Written by <a href="https://crst.net" class="text-gold hover:underline" target="_blank" rel="noopener">CRST</a> — direct mail &amp; printing specialists, Hudson Valley NY. Pricing verified February 2026 from Vistaprint.com. See our <a href="/editorial-policy/" class="text-gold hover:underline">editorial policy</a>.</p>
+    </div>
+  </article>
+
+  <LeadForm
+    heading="Skip the Wait — Get a Local Business Card Quote"
+    subheading="CRST prints and delivers across the Hudson Valley. Free file review, 1–3 day turnaround."
+  />
+
+</Base>

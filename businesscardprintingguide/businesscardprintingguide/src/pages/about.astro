@@ -1,0 +1,107 @@
+---
+import Base from '../layouts/Base.astro';
+
+const breadcrumbs = [
+  { name: "Business Card Printing Guide", url: "https://www.businesscardprintingguide.com" },
+  { name: "About", url: "https://www.businesscardprintingguide.com/about/" }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "https://www.businesscardprintingguide.com/about/#aboutpage",
+  "name": "About Business Card Printing Guide",
+  "description": "BusinessCardPrintingGuide.com is an independent resource produced by CRST, a direct mail and printing company serving the Hudson Valley since 2008.",
+  "url": "https://www.businesscardprintingguide.com/about/",
+  "mainEntity": {
+    "@type": "Organization",
+    "@id": "https://www.businesscardprintingguide.com/#organization"
+  }
+};
+---
+
+<Base
+  title="About Business Card Printing Guide — Powered by CRST"
+  description="BusinessCardPrintingGuide.com is an independent printing resource produced by CRST, a direct mail and printing company serving the Hudson Valley since 2008."
+  schema={schema}
+  breadcrumbs={breadcrumbs}
+>
+
+  <!-- CTA 1 — Top strip -->
+  <div class="bg-gold/10 border-b border-gold/20">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm">
+      <p class="text-slate">Hudson Valley business? CRST prints <strong class="text-ink">16pt cards in 1–3 days</strong> with local pickup — free file review included.</p>
+      <a href="/get-a-quote/" class="flex-shrink-0 bg-ink text-paper px-4 py-1.5 rounded-sm text-xs font-semibold hover:bg-gold hover:text-ink transition-colors whitespace-nowrap">Get a Free Quote →</a>
+    </div>
+  </div>
+
+  <section class="bg-ink text-paper pt-12 pb-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-gold text-xs font-semibold uppercase tracking-widest mb-3">About This Site</p>
+      <h1 class="font-display text-4xl md:text-5xl leading-tight mb-4">
+        About <span class="text-gold italic">Business Card Printing Guide</span>
+      </h1>
+      <p class="text-muted text-lg max-w-2xl leading-relaxed">
+        An independent resource for business owners who want straight answers on printing — without the upsell.
+      </p>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 py-12">
+
+    <h2 class="font-display text-3xl text-ink mb-4">Why This Site Exists</h2>
+    <p class="text-slate leading-relaxed mb-4">
+      BusinessCardPrintingGuide.com was built to answer one question clearly: where should a business owner get their cards printed, and what will they actually get?
+    </p>
+    <p class="text-slate leading-relaxed mb-6">
+      The online printing market is crowded with options ranging from $18 template services to $200 luxury print runs. Most comparison content online is written by affiliates earning commissions — which means the "winner" is whoever pays the highest referral fee, not whoever prints the best card.
+    </p>
+    <p class="text-slate leading-relaxed mb-6">
+      This guide is produced by CRST — a direct mail and printing company that has operated in the Hudson Valley since 2008. We have a direct financial interest in local print work, and we're transparent about that. Where online printing is the right answer, we say so. Where local printing wins, we explain exactly why.
+    </p>
+
+    <!-- Who's behind it -->
+    <div class="bg-ink text-paper rounded-sm p-8 my-10">
+      <h2 class="font-display text-2xl text-paper mb-6">Who's Behind This Site</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-gold font-semibold mb-2">CRST — Cornerstone Services</h3>
+          <p class="text-muted text-sm leading-relaxed mb-3">
+            Direct mail and printing specialists serving Ulster, Dutchess, and Orange Counties in New York's Hudson Valley. Founded 2008. Services include business card printing, postcard printing, EDDM campaigns, brochure printing, and large format work.
+          </p>
+          <a href="https://crst.net" class="text-gold text-sm hover:underline" target="_blank" rel="noopener">Visit CRST.net →</a>
+        </div>
+        <div>
+          <h3 class="text-gold font-semibold mb-2">Our Editorial Approach</h3>
+          <p class="text-muted text-sm leading-relaxed">
+            Guides are written based on direct print production experience, current market pricing verified against printer websites, and real turnaround observations. We update pricing data quarterly. All affiliate relationships are disclosed.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">What We Cover</h2>
+    <p class="text-slate leading-relaxed mb-4">
+      This site focuses on business card printing specifically — paper stocks, finishes, file preparation, vendor comparisons, and cost breakdowns. We cover the major online printers (Vistaprint, Gotprint, FedEx Office, Staples) with honest assessments of where each one performs and where they fall short.
+    </p>
+    <p class="text-slate leading-relaxed mb-6">
+      For broader printing needs — postcards, EDDM, brochures, large format — those topics are covered at <a href="https://crst.net" class="text-gold hover:underline" target="_blank" rel="noopener">CRST.net</a> directly.
+    </p>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">Corrections & Contact</h2>
+    <p class="text-slate leading-relaxed mb-4">
+      Pricing changes. If you find outdated information, we want to know. Use the quote form on the <a href="/get-a-quote/" class="text-gold hover:underline">Get a Quote page</a> to reach us — include "correction" in your message and we'll update the relevant article.
+    </p>
+
+    <div class="mt-10 pt-6 border-t border-ink/10 text-xs text-muted">
+      <p>BusinessCardPrintingGuide.com is a property of Cornerstone Services (CRST), New Paltz, NY 12561. Content produced 2026. See our <a href="/editorial-policy/" class="text-gold hover:underline">Editorial Policy</a> and <a href="/privacy/" class="text-gold hover:underline">Privacy Policy</a>.</p>
+
+    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <a href="/" class="border border-ink/10 rounded-sm px-4 py-3 text-sm text-ink hover:border-gold/40 hover:text-gold transition-all bg-white text-center">Read the Business Card Printing Guide →</a>
+      <a href="/get-a-quote/" class="bg-gold text-ink px-4 py-3 rounded-sm text-sm font-semibold hover:bg-gold-light transition-colors text-center">Get a Free Quote from CRST →</a>
+    </div>
+    </div>
+
+  </article>
+
+</Base>

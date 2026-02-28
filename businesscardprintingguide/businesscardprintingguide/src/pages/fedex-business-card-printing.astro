@@ -1,0 +1,303 @@
+---
+import Base from '../layouts/Base.astro';
+import LeadForm from '../components/LeadForm.astro';
+
+const breadcrumbs = [
+  { name: "Business Card Printing Guide", url: "https://www.businesscardprintingguide.com" },
+  { name: "FedEx Business Card Printing", url: "https://www.businesscardprintingguide.com/fedex-business-card-printing/" }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Review",
+      "@id": "https://www.businesscardprintingguide.com/fedex-business-card-printing/#review",
+      "name": "FedEx Business Card Printing: Cost, Quality & Same-Day Pickup (2026)",
+      "description": "FedEx Office business cards reviewed — same-day pickup reality, pricing vs alternatives, quality assessment, and when a local printer delivers more value.",
+      "author": { "@type": "Organization", "name": "CRST", "url": "https://crst.net" },
+      "dateModified": "2026-02-01",
+      "datePublished": "2026-02-01",
+      "itemReviewed": {
+        "@type": "Product",
+        "name": "FedEx Office Business Card Printing",
+        "brand": { "@type": "Brand", "name": "FedEx Office" }
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "3.5",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.businesscardprintingguide.com/fedex-business-card-printing/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does FedEx Office charge for business cards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FedEx Office business cards typically cost $35–$65 for 250 standard cards, significantly more than online printers like Vistaprint ($18–$25) or Gotprint ($22–$30). The premium reflects in-store convenience and same-day or next-day pickup availability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you get same-day business cards at FedEx?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, most FedEx Office locations offer same-day business card printing when orders are placed before noon. Availability depends on store capacity and product configuration. Call your local store before ordering to confirm same-day availability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is FedEx Office good for business card printing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FedEx Office is acceptable for emergency same-day business cards. Quality is limited to basic 14pt stock with standard gloss finish at most locations. For quality-focused orders, a local print shop or online printer like Gotprint delivers better results at lower or comparable cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does FedEx business card printing compare to a local printer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Local print shops typically offer better stock options (16pt vs FedEx's 14pt standard), more finish choices, free file review, and comparable or faster turnaround with pickup. FedEx's main advantage is retail convenience — you can walk in without a relationship or prior order."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Base
+  title="FedEx Business Card Printing: Cost, Quality & Same-Day Pickup (2026)"
+  description="FedEx Office business cards honestly reviewed — same-day pickup, pricing vs Vistaprint and local printers, quality assessment, and exactly when it's worth using."
+  schema={schema}
+  breadcrumbs={breadcrumbs}
+>
+
+
+  <!-- CTA 1 Top banner SQEG min 3 CTAs per page -->
+  <div class="bg-gold/10 border-b border-gold/20">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm">
+      <p class="text-slate">Hudson Valley business? CRST prints <strong class="text-ink">16pt cards in 1-3 days</strong> with local pickup - free file review included.</p>
+      <a href="/get-a-quote/" class="flex-shrink-0 bg-ink text-paper px-4 py-1.5 rounded-sm text-xs font-semibold hover:bg-gold hover:text-ink transition-colors whitespace-nowrap">Get a Free Quote</a>
+    </div>
+  </div>
+
+  <div class="bg-paper border-b border-ink/10">
+    <div class="max-w-4xl mx-auto px-4 py-2 text-xs text-muted flex items-center gap-2">
+      <a href="/" class="hover:text-gold transition-colors">Business Card Printing Guide</a>
+      <span>→</span>
+      <span class="text-ink">FedEx Business Card Printing</span>
+    </div>
+  </div>
+
+  <section class="bg-ink text-paper pt-12 pb-16 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, #c9a84c 0, #c9a84c 1px, transparent 0, transparent 50%); background-size: 12px 12px;"></div>
+    <div class="max-w-4xl mx-auto px-4 relative z-10">
+      <p class="text-gold text-xs font-semibold uppercase tracking-widest mb-3">Spoke Guide · Printer Review</p>
+      <h1 class="font-display text-4xl md:text-5xl leading-tight mb-4">
+        FedEx Business Card Printing:<br/><span class="text-gold italic">Is Same-Day Worth the Price?</span>
+      </h1>
+      <p class="text-muted text-lg max-w-2xl leading-relaxed">
+        FedEx Office charges a premium for convenience. This review breaks down exactly what you get, what you pay, and the three situations where it actually makes sense.
+      </p>
+      <div class="flex flex-wrap gap-4 text-sm mt-6">
+        <div class="bg-white/10 border border-white/20 rounded-sm px-4 py-2 text-paper">⭐ 3.5 / 5</div>
+        <div class="bg-white/10 border border-white/20 rounded-sm px-4 py-2 text-paper">📋 Updated February 2026</div>
+        <div class="bg-white/10 border border-white/20 rounded-sm px-4 py-2 text-paper">⏱ 6 min read</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Takeaways -->
+  <section class="max-w-4xl mx-auto px-4 -mt-6 relative z-10">
+    <div class="bg-paper border border-gold/30 rounded-sm p-6 shadow-lg">
+      <h2 class="font-display text-xl text-ink mb-4 flex items-center gap-2">
+        <span class="w-6 h-6 bg-gold rounded-sm flex items-center justify-center text-ink text-xs font-bold">✓</span>
+        Key Takeaways
+      </h2>
+      <ul class="space-y-2 text-sm text-slate">
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> FedEx Office charges $35–$65 for 250 standard cards — roughly double online printer pricing.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Same-day pickup is real and works — the one genuine competitive advantage over online printers.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Stock is limited to 14pt coated at most locations — no soft-touch, no premium upgrades, no spot UV.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Quality is adequate for emergency use — not a first impression card you'd hand to a top prospect.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Local printers match FedEx on turnaround with better stock, more options, and free file review at comparable or lower cost.</li>
+      </ul>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 py-12">
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-8">What Is FedEx Office Business Card Printing?</h2>
+    <p class="text-slate leading-relaxed mb-4">
+      FedEx Office (formerly Kinko's) operates over 2,000 retail print locations across the United States. Their business card printing service is built around a single selling point: you can walk in, order, and pick up cards the same day or next day without shipping delays.
+    </p>
+    <p class="text-slate leading-relaxed mb-6">
+      That convenience comes at a price. FedEx Office positions itself as a premium retail service, not a volume print shop. Their pricing is significantly higher than online alternatives like <a href="/vistaprint-business-cards/" class="text-gold hover:underline">Vistaprint</a> or <a href="/gotprint-business-cards/" class="text-gold hover:underline">Gotprint</a>, and their product range for business cards is narrower than what dedicated printers — online or local — offer. If you need cards but aren't in an emergency, see our <a href="/print-business-cards/" class="text-gold hover:underline">guide to business card printing options</a> for a full cost comparison.
+    </p>
+
+    <h2 class="font-display text-3xl text-ink mb-6 mt-10">FedEx Business Card Pricing (2026)</h2>
+    <div class="overflow-x-auto mb-3">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-ink text-paper">
+            <th class="text-left px-4 py-3 font-semibold">Quantity</th>
+            <th class="text-left px-4 py-3 font-semibold">Standard (14pt gloss)</th>
+            <th class="text-left px-4 py-3 font-semibold">Premium (if available)</th>
+            <th class="text-left px-4 py-3 font-semibold">Turnaround</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-ink/10">
+          {[
+            { qty: "250 cards", std: "$35–$55", prem: "$55–$80", time: "Same day / Next day" },
+            { qty: "500 cards", std: "$55–$80", prem: "$80–$120", time: "Same day / Next day" },
+            { qty: "1,000 cards", std: "$90–$130", prem: "$130–$180", time: "1–2 days" },
+          ].map((r, i) => (
+            <tr class={i % 2 === 0 ? "bg-white" : "bg-paper"}>
+              <td class="px-4 py-3 font-medium text-ink">{r.qty}</td>
+              <td class="px-4 py-3 text-slate">{r.std}</td>
+              <td class="px-4 py-3 text-slate">{r.prem}</td>
+              <td class="px-4 py-3 text-slate">{r.time}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-muted text-xs mb-8">Pricing sourced from FedEx Office website and in-store quotes, February 2026. Prices vary by location. Premium options not available at all stores.</p>
+
+    <!-- Mid-page CTA -->
+    <div class="bg-ink text-paper rounded-sm p-6 my-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <p class="font-display text-xl text-paper mb-1">Same price as FedEx. Better cards. Faster locally.</p>
+        <p class="text-muted text-sm">CRST offers 1–3 day turnaround on 16pt stock with free file review. Hudson Valley pickup available.</p>
+      </div>
+      <a href="/get-a-quote/" class="flex-shrink-0 bg-gold text-ink px-6 py-3 rounded-sm font-semibold text-sm hover:bg-gold-light transition-colors whitespace-nowrap">Get a Free Quote →</a>
+    </div>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">How Does FedEx Compare to Online Printers?</h2>
+    <div class="overflow-x-auto mb-8">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-ink text-paper">
+            <th class="text-left px-4 py-3 font-semibold">Factor</th>
+            <th class="text-left px-4 py-3 font-semibold">FedEx Office</th>
+            <th class="text-left px-4 py-3 font-semibold">Vistaprint</th>
+            <th class="text-left px-4 py-3 font-semibold text-gold">Local Printer (CRST)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-ink/10">
+          {[
+            { f: "Price (250 cards)", fed: "$35–$55", vp: "$18–$25", local: "$65–$90" },
+            { f: "Turnaround", fed: "Same day", vp: "8–12 days", local: "1–3 days" },
+            { f: "Base stock", fed: "14pt coated", vp: "14pt coated", local: "16pt coated" },
+            { f: "Premium finishes", fed: "Limited", vp: "Add-on fees", local: "Full range" },
+            { f: "File review", fed: "Basic check", vp: "None", local: "Free, thorough" },
+            { f: "Color accuracy", fed: "Inconsistent", vp: "Inconsistent", local: "Consistent" },
+            { f: "Custom options", fed: "Minimal", vp: "Templates only", local: "Full custom" },
+          ].map((r, i) => (
+            <tr class={i % 2 === 0 ? "bg-white" : "bg-paper"}>
+              <td class="px-4 py-3 font-medium text-ink">{r.f}</td>
+              <td class="px-4 py-3 text-slate">{r.fed}</td>
+              <td class="px-4 py-3 text-slate">{r.vp}</td>
+              <td class="px-4 py-3 text-slate font-medium text-ink">{r.local}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">When Does FedEx Office Make Sense?</h2>
+    <p class="text-slate leading-relaxed mb-4">FedEx is the right call in exactly three situations:</p>
+    <div class="space-y-3 mb-8">
+      {[
+        { num: "01", title: "True emergencies only", body: "You have a trade show, networking event, or meeting tomorrow morning and you forgot to order cards. FedEx same-day is the only option that doesn't involve overnighting from an online printer." },
+        { num: "02", title: "No existing print relationship", body: "If you don't have a local printer you work with and you need something today, FedEx removes the friction of finding and establishing a new vendor relationship quickly." },
+        { num: "03", title: "Low-stakes temporary cards", body: "Transitional cards while you're rebranding, or basic cards for a junior team member where quality isn't the primary concern." },
+      ].map(({ num, title, body }) => (
+        <div class="flex gap-5 p-5 bg-white border border-ink/10 rounded-sm">
+          <div class="flex-shrink-0 font-mono text-3xl font-bold text-gold/30 leading-none">{num}</div>
+          <div>
+            <h3 class="font-semibold text-ink mb-1">{title}</h3>
+            <p class="text-slate text-sm leading-relaxed">{body}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">When Should You Skip FedEx?</h2>
+    <ul class="space-y-2 text-slate text-sm mb-8 ml-4">
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">→</span> You have 24+ hours — a local printer delivers better quality at the same or lower price</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">→</span> Your brand uses specific colors that need matching — FedEx can't guarantee color accuracy</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">→</span> You want heavier stock (16pt+), soft-touch, spot UV, or rounded corners</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">→</span> You're ordering for a team or in volume — the per-card price at FedEx doesn't scale well</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">→</span> The card represents your brand at a high-value interaction — don't hand 14pt FedEx cards to your best prospects</li>
+    </ul>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">The Hudson Valley Alternative</h2>
+    <p class="text-slate leading-relaxed mb-4">
+      If you're in Ulster, Dutchess, or Orange County and you need cards quickly, there's a better option than driving to a FedEx Office location. CRST turns around business card orders in 1–3 business days with local pickup in New Paltz — at better quality and comparable pricing.
+    </p>
+    <p class="text-slate leading-relaxed mb-6">
+      The difference: CRST prints on 16pt stock as standard (not 14pt), reviews your file before printing, and can match Pantone colors. You get what FedEx promises — fast, local, no shipping wait — with professional print shop quality behind it.
+    </p>
+
+    <!-- FAQ section — visible, not accordions, for AI extraction -->
+    <h2 class="font-display text-3xl text-ink mb-6 mt-10">Frequently Asked Questions</h2>
+    <div class="space-y-4 mb-10">
+      {[
+        {
+          q: "How much does FedEx Office charge for business cards?",
+          a: "FedEx Office business cards typically cost $35–$65 for 250 standard cards — roughly double the price of online printers like Vistaprint or Gotprint. The premium covers in-store convenience and same-day or next-day pickup availability."
+        },
+        {
+          q: "Can you get same-day business cards at FedEx?",
+          a: "Yes. Most FedEx Office locations offer same-day business card printing when orders are placed before noon. Call your local store to confirm availability before ordering — capacity varies by location."
+        },
+        {
+          q: "Is FedEx Office good for business card printing?",
+          a: "FedEx Office is acceptable for emergency same-day cards. Quality is limited to basic 14pt stock with standard gloss finish at most locations. For quality-focused orders or anything beyond a basic card, a dedicated local print shop or an online printer like Gotprint delivers better results."
+        },
+        {
+          q: "How does FedEx business card printing compare to a local printer?",
+          a: "Local print shops typically offer better stock options (16pt vs FedEx's 14pt standard), more finish choices, free file review, and comparable turnaround with local pickup — often at lower cost than FedEx Office. FedEx's main advantage is retail walk-in convenience without a prior relationship."
+        },
+      ].map(({ q, a }) => (
+        <div class="border border-ink/10 rounded-sm p-5 bg-white">
+          <h3 class="font-semibold text-ink mb-2 text-sm">{q}</h3>
+          <p class="text-slate text-sm leading-relaxed">{a}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Internal links -->
+    <h2 class="font-display text-2xl text-ink mb-4 mt-10">More Business Card Guides</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      {[
+        { title: "Business Card Printing: The Complete Guide", url: "/" },
+        { title: "Vistaprint Business Cards: Honest Review", url: "/vistaprint-business-cards/" },
+        { title: "Gotprint Business Cards Review", url: "/gotprint-business-cards/" },
+        { title: "How to Print Business Cards: File Setup", url: "/print-business-cards/" },
+        { title: "Staples Business Card Printing", url: "/staples-business-card-printing/" },
+      ].map(({ title, url }) => (
+        <a href={url} class="border border-ink/10 rounded-sm px-4 py-3 text-sm text-ink hover:border-gold/40 hover:text-gold transition-all bg-white">
+          {title} →
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-10 pt-6 border-t border-ink/10 text-xs text-muted">
+      <p>Written by <a href="https://crst.net" class="text-gold hover:underline" target="_blank" rel="noopener">CRST</a> — direct mail &amp; printing specialists, Hudson Valley NY. Pricing verified February 2026 from FedEx Office website and in-store quotes. See our <a href="/editorial-policy/" class="text-gold hover:underline">editorial policy</a>.</p>
+    </div>
+  </article>
+
+  <LeadForm
+    heading="Skip FedEx Prices — Get Local Quality"
+    subheading="CRST delivers 16pt cards in 1–3 days with local Hudson Valley pickup. Free file review included."
+  />
+
+</Base>

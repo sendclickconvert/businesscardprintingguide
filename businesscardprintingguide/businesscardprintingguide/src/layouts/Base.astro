@@ -1,0 +1,280 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  schema?: object;
+  breadcrumbs?: { name: string; url: string }[];
+}
+
+const { title, description, canonical, schema, breadcrumbs } = Astro.props;
+const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).href;
+const siteURL = "https://www.businesscardprintingguide.com";
+
+// ─── SITEWIDE SCHEMA BLOCKS ───────────────────────────────────────────────────
+
+// 1. Organization — the EMD site as a publisher entity (separate from CRST)
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${siteURL}/#organization`,
+  "name": "Business Card Printing Guide",
+  "url": siteURL,
+  "description": "An independent printing guide resource covering business card printing options, costs, and comparisons. Produced by CRST, Hudson Valley printing specialists.",
+  "logo": {
+    "@type": "ImageObject",
+    "url": `${siteURL}/logo.png`,
+    "width": 200,
+    "height": 60
+  },
+  "parentOrganization": {
+    "@id": "https://crst.net/#business"
+  },
+  "sameAs": [
+    "https://crst.net",
+    "https://www.facebook.com/crsthudsonvalley"
+  ]
+};
+
+// 2. LocalBusiness — CRST as the operating entity behind the site
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://crst.net/#business",
+  "name": "Cornerstone Services (CRST)",
+  "alternateName": "CRST",
+  "description": "Direct mail and printing specialists serving the Hudson Valley since 2008. Design, print, and mail — all under one roof.",
+  "url": "https://crst.net",
+  "telephone": "+18452555555",
+  "priceRange": "$$",
+  "foundingDate": "2008",
+  "image": "https://crst.net/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "New Paltz",
+    "addressLocality": "New Paltz",
+    "addressRegion": "NY",
+    "postalCode": "12561",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7462,
+    "longitude": -74.0865
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+18452555555",
+    "areaServed": ["Ulster County NY", "Dutchess County NY", "Orange County NY"],
+    "availableLanguage": "English"
+  },
+  "areaServed": [
+    { "@type": "County", "name": "Ulster County", "addressRegion": "NY" },
+    { "@type": "County", "name": "Dutchess County", "addressRegion": "NY" },
+    { "@type": "County", "name": "Orange County", "addressRegion": "NY" }
+  ],
+  "knowsAbout": [
+    "Business Card Printing",
+    "Direct Mail Marketing",
+    "Every Door Direct Mail",
+    "Postcard Printing",
+    "Brochure Printing",
+    "Large Format Printing",
+    "Variable Data Printing"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Printing & Direct Mail Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Card Printing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Postcard Printing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Every Door Direct Mail (EDDM)" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brochure & Flyer Printing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Large Format Printing" } }
+    ]
+  },
+  "sameAs": [
+    "https://crst.net",
+    "https://www.businesscardprintingguide.com",
+    "https://www.facebook.com/crsthudsonvalley"
+  ]
+};
+
+// 3. WebSite schema — publisher is the EMD Organization, not the LocalBusiness
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteURL}/#website`,
+  "url": siteURL,
+  "name": "Business Card Printing Guide",
+  "description": "Unbiased guides to business card printing — comparing online printers, costs, paper stocks, and finishes. Produced by CRST.",
+  "publisher": {
+    "@id": `${siteURL}/#organization`
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": `${siteURL}/?s={search_term_string}`
+    },
+    "query-input": "required name=search_term_string"
+  }
+};
+
+// 3. BreadcrumbList — built from breadcrumbs prop or defaults to home
+const breadcrumbItems = breadcrumbs || [{ name: "Home", url: siteURL }];
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Business Card Printing Guide",
+      "item": siteURL
+    },
+    ...breadcrumbItems.slice(1).map((crumb, i) => ({
+      "@type": "ListItem",
+      "position": i + 2,
+      "name": crumb.name,
+      "item": crumb.url
+    }))
+  ]
+};
+
+// 4. WebPage schema — wraps every page with consistent identity
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${canonicalURL}#webpage`,
+  "url": canonicalURL,
+  "name": title,
+  "description": description,
+  "isPartOf": { "@id": `${siteURL}/#website` },
+  "about": { "@id": "https://crst.net/#business" },
+  "breadcrumb": { "@id": `${canonicalURL}#breadcrumb` },
+  "inLanguage": "en-US",
+  "dateModified": new Date().toISOString().split('T')[0]
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Business Card Printing Guide" />
+    <meta property="og:image" content="https://www.businesscardprintingguide.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://www.businesscardprintingguide.com/og-image.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         SITEWIDE SCHEMA — fires on every page
+         1. Organization  — EMD as publisher entity
+         2. LocalBusiness — CRST operating entity (NAP, geo, services)
+         3. WebSite       — site identity, SearchAction
+         4. BreadcrumbList— page position in site hierarchy
+         5. WebPage       — current page identity
+         6. Page schema   — passed per-page (Article, Review, HowTo etc.)
+         ═══════════════════════════════════════════════════════════════ -->
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
+
+    <!-- Page-level schema (Article, Review, HowTo, etc.) -->
+    {schema && (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    )}
+
+    <style>
+      html { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+      body { background-color: #faf8f5; color: #1a1a2e; }
+    </style>
+  </head>
+  <body class="font-body antialiased">
+
+    <!-- Header -->
+    <header class="border-b border-gold/20 bg-ink text-paper sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3 group">
+          <div class="w-8 h-8 bg-gold rounded-sm flex items-center justify-center text-ink font-bold text-sm font-mono">BC</div>
+          <span class="font-display text-lg text-paper tracking-tight">Business Card Printing <span class="text-gold">Guide</span></span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-body font-medium text-muted">
+          <a href="/" class="hover:text-gold transition-colors">Hub Guide</a>
+          <a href="/vistaprint-business-cards/" class="hover:text-gold transition-colors">Vistaprint vs Local</a>
+          <a href="/print-business-cards/" class="hover:text-gold transition-colors">How to Print</a>
+          <a href="/get-a-quote/" class="bg-gold text-ink px-4 py-2 rounded-sm font-semibold hover:bg-gold-light transition-colors">Get a Quote</a>
+        </nav>
+        <!-- Mobile CTA -->
+        <a href="/get-a-quote/" class="md:hidden bg-gold text-ink px-4 py-2 rounded-sm text-sm font-semibold">Get a Quote</a>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-paper mt-20">
+      <div class="max-w-6xl mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <div class="w-7 h-7 bg-gold rounded-sm flex items-center justify-center text-ink font-bold text-xs font-mono">BC</div>
+              <span class="font-display text-base text-paper">Business Card Printing Guide</span>
+            </div>
+            <p class="text-muted text-sm leading-relaxed">Unbiased guidance on business card printing options — from online printers to local shops in the Hudson Valley.</p>
+          </div>
+          <div>
+            <h3 class="text-gold font-semibold text-sm mb-3 uppercase tracking-widest">Guides</h3>
+            <ul class="space-y-2 text-sm text-muted">
+              <li><a href="/" class="hover:text-gold transition-colors">Complete Printing Guide</a></li>
+              <li><a href="/vistaprint-business-cards/" class="hover:text-gold transition-colors">Vistaprint vs Local Printers</a></li>
+              <li><a href="/print-business-cards/" class="hover:text-gold transition-colors">How to Print Business Cards</a></li>
+              <li><a href="/gotprint-business-cards/" class="hover:text-gold transition-colors">Gotprint Review</a></li>
+              <li><a href="/fedex-business-card-printing/" class="hover:text-gold transition-colors">FedEx Business Cards</a></li>
+              <li><a href="/staples-business-card-printing/" class="hover:text-gold transition-colors">Staples Business Cards</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-gold font-semibold text-sm mb-3 uppercase tracking-widest">Get Printed</h3>
+            <p class="text-muted text-sm mb-4">Powered by CRST — direct mail &amp; printing specialists serving the Hudson Valley since 2008.</p>
+            <a href="/get-a-quote/" class="inline-block bg-gold text-ink px-5 py-2.5 rounded-sm text-sm font-semibold hover:bg-gold-light transition-colors">Request a Free Quote →</a>
+            <ul class="mt-6 space-y-2 text-sm text-muted border-t border-white/10 pt-4">
+              <li><a href="/about/" class="hover:text-gold transition-colors">About This Site</a></li>
+              <li><a href="/editorial-policy/" class="hover:text-gold transition-colors">Editorial Policy</a></li>
+              <li><a href="/privacy/" class="hover:text-gold transition-colors">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted">
+          <p>© {new Date().getFullYear()} BusinessCardPrintingGuide.com — An informational resource by <a href="https://crst.net" class="text-gold hover:underline" target="_blank" rel="noopener">CRST.net</a> · <a href="/privacy/" class="hover:text-gold transition-colors">Privacy</a> · <a href="/editorial-policy/" class="hover:text-gold transition-colors">Editorial Policy</a></p>
+          <p>Hudson Valley, NY · Ulster · Dutchess · Orange Counties</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

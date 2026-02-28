@@ -1,0 +1,322 @@
+---
+import Base from '../layouts/Base.astro';
+import LeadForm from '../components/LeadForm.astro';
+
+const breadcrumbs = [
+  { name: "Business Card Printing Guide", url: "https://www.businesscardprintingguide.com" },
+  { name: "How to Print Business Cards", url: "https://www.businesscardprintingguide.com/print-business-cards/" }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HowTo",
+      "@id": "https://www.businesscardprintingguide.com/print-business-cards/#howto",
+      "name": "How to Print Business Cards: File Setup to Final Product",
+      "description": "Step-by-step guide to printing business cards — file specs, bleed, resolution, stock selection, and choosing between online and local printers.",
+      "author": { "@type": "Organization", "name": "CRST", "url": "https://crst.net" },
+      "dateModified": "2026-02-01",
+      "totalTime": "PT30M",
+      "supply": [
+        { "@type": "HowToSupply", "name": "Business card design file (PDF, AI, or Canva)" },
+        { "@type": "HowToSupply", "name": "16pt coated card stock" }
+      ],
+      "tool": [
+        { "@type": "HowToTool", "name": "Adobe Illustrator, InDesign, or Canva" },
+        { "@type": "HowToTool", "name": "PDF export with bleed settings" }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Set document size with bleed",
+          "text": "Create a new document at 3.5\" × 2\" with 0.125\" bleed on all sides. Total document size with bleed: 3.75\" × 2.25\"."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Work in CMYK color mode",
+          "text": "Set your document to CMYK color mode from the start. RGB files submitted to press will be auto-converted, usually with noticeable color shifts."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Fill the bleed area with background color",
+          "text": "Extend your background color all the way to the bleed line — never leave white space in the bleed zone."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Keep text inside the safe zone",
+          "text": "All text, logos, and critical elements should sit at least 0.125\" inside the trim line to protect against cutting shifts."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Export as PDF with correct settings",
+          "text": "Export as PDF/X-1a at 300 DPI minimum. Check 'Use Document Bleed Settings' and embed all fonts."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.businesscardprintingguide.com/print-business-cards/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What size should business cards be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard North American business card size is 3.5 inches wide by 2 inches tall. When setting up your file, add 0.125\" bleed on all sides, making the total document size 3.75\" × 2.25\"."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What resolution do business cards need to be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Business card files should be set at 300 DPI (dots per inch) minimum. Files below 300 DPI will print blurry. Export as PDF/X-1a or PDF/X-4 format in CMYK color mode."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is bleed on a business card?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bleed is the area of your design that extends beyond the trim line — usually 0.125\" on all sides. It ensures background colors and images print edge-to-edge without white borders appearing after cutting."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Base
+  title="How to Print Business Cards: File Setup to Final Product (2026)"
+  description="Step-by-step guide to printing business cards — bleed lines, resolution, file formats, stock selection, and when to go online vs. local. Everything in one place."
+  schema={schema}
+  breadcrumbs={breadcrumbs}
+>
+
+
+  <!-- CTA 1 Top banner SQEG min 3 CTAs per page -->
+  <div class="bg-gold/10 border-b border-gold/20">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm">
+      <p class="text-slate">Hudson Valley business? CRST prints <strong class="text-ink">16pt cards in 1-3 days</strong> with local pickup - free file review included.</p>
+      <a href="/get-a-quote/" class="flex-shrink-0 bg-ink text-paper px-4 py-1.5 rounded-sm text-xs font-semibold hover:bg-gold hover:text-ink transition-colors whitespace-nowrap">Get a Free Quote</a>
+    </div>
+  </div>
+
+  <div class="bg-paper border-b border-ink/10">
+    <div class="max-w-4xl mx-auto px-4 py-2 text-xs text-muted flex items-center gap-2">
+      <a href="/" class="hover:text-gold transition-colors">Business Card Printing Guide</a>
+      <span>→</span>
+      <span class="text-ink">How to Print Business Cards</span>
+    </div>
+  </div>
+
+  <section class="bg-ink text-paper pt-12 pb-16 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, #c9a84c 0, #c9a84c 1px, transparent 0, transparent 50%); background-size: 12px 12px;"></div>
+    <div class="max-w-4xl mx-auto px-4 relative z-10">
+      <p class="text-gold text-xs font-semibold uppercase tracking-widest mb-3">Spoke Guide · File Setup</p>
+      <h1 class="font-display text-4xl md:text-5xl leading-tight mb-4">
+        How to Print Business Cards:<br/><span class="text-gold italic">File Setup to Final Product</span>
+      </h1>
+      <p class="text-muted text-lg max-w-2xl leading-relaxed">
+        The difference between a great print and a disappointment is usually in the file. Here's every spec you need to get it right the first time.
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 -mt-6 relative z-10">
+    <div class="bg-paper border border-gold/30 rounded-sm p-6 shadow-lg">
+      <h2 class="font-display text-xl text-ink mb-3 flex items-center gap-2">
+        <span class="w-6 h-6 bg-gold rounded-sm flex items-center justify-center text-ink text-xs font-bold">✓</span>
+        Key Takeaways
+      </h2>
+      <ul class="space-y-2 text-sm text-slate">
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Standard business card size is 3.5" × 2" — always set up with 0.125" bleed on all sides.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Export as PDF/X-1a or PDF/X-4 at 300 DPI minimum. CMYK color mode required.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Keep all text and important elements 0.125" inside the trim line (the safe zone).</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Local printers like CRST review your file before printing — online printers usually don't.</li>
+      </ul>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 py-12">
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-8">Standard Business Card Dimensions</h2>
+    <p class="text-slate leading-relaxed mb-4">
+      In North America, the standard business card size is <strong class="text-ink">3.5 inches wide by 2 inches tall</strong>. This is the size your wallet slots, cardholders, and recipients expect.
+    </p>
+    <p class="text-slate leading-relaxed mb-6">
+      When setting up your file, you'll work with three zones: the <strong class="text-ink">bleed area</strong> (extends 0.125" beyond the trim on all sides), the <strong class="text-ink">trim line</strong> (where the card will be cut), and the <strong class="text-ink">safe zone</strong> (0.125" inside the trim). Your total document size with bleed should be 3.75" × 2.25".
+    </p>
+
+    <!-- Spec box -->
+    <div class="bg-ink text-paper rounded-sm p-6 mb-8 font-mono text-sm">
+      <p class="text-gold font-semibold mb-3">// File Specs Quick Reference</p>
+      <div class="space-y-1 text-paper/80">
+        <p>Finished size:   3.5" × 2"</p>
+        <p>With bleed:      3.75" × 2.25"</p>
+        <p>Bleed:           0.125" all sides</p>
+        <p>Safe zone:       0.125" inside trim</p>
+        <p>Resolution:      300 DPI minimum</p>
+        <p>Color mode:      CMYK (not RGB)</p>
+        <p>File format:     PDF/X-1a or PDF/X-4</p>
+        <p>Font handling:   Embed or outline all fonts</p>
+      </div>
+    </div>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">Step-by-Step: Setting Up Your File</h2>
+
+    <div class="space-y-4 mb-8">
+      {[
+        { step: "01", title: "Set document size with bleed", body: "In Adobe Illustrator or InDesign: new document at 3.5\" × 2\" with 0.125\" bleed on all sides. In Canva: set custom dimensions to 3.75\" × 2.25\" and draw guides at 0.125\" from each edge." },
+        { step: "02", title: "Work in CMYK color mode", body: "Printers use CMYK ink. RGB files submitted to press will be auto-converted — usually with noticeable color shifts, especially in blues and oranges. Set your document to CMYK from the start." },
+        { step: "03", title: "Fill the bleed area with background color", body: "If your card has a colored background, extend it all the way to the bleed line (the outer edge of your 3.75\" × 2.25\" document). Never leave white space in the bleed zone." },
+        { step: "04", title: "Keep text inside the safe zone", body: "All text, logos, and critical elements should sit at least 0.125\" inside the trim line. This protects against minor shifts in the cutting process." },
+        { step: "05", title: "Export as PDF with correct settings", body: "In Illustrator/InDesign: File → Export → PDF/X-1a. Check 'Use Document Bleed Settings.' Embed all fonts. In Canva: Download as PDF Print with crop marks and bleed enabled." },
+      ].map(({ step, title, body }) => (
+        <div class="flex gap-5 p-5 bg-white border border-ink/10 rounded-sm">
+          <div class="flex-shrink-0 font-mono text-3xl font-bold text-gold/40 leading-none">{step}</div>
+          <div>
+            <h3 class="font-semibold text-ink mb-1.5">{title}</h3>
+            <p class="text-slate text-sm leading-relaxed">{body}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="bg-ink text-paper rounded-sm p-6 my-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <p class="font-display text-xl text-paper mb-1">Not sure your file is print-ready?</p>
+        <p class="text-muted text-sm">CRST reviews every file before it goes to press — no extra charge. Hudson Valley pickup available.</p>
+      </div>
+      <a href="/get-a-quote/" class="flex-shrink-0 bg-gold text-ink px-6 py-3 rounded-sm font-semibold text-sm hover:bg-gold-light transition-colors whitespace-nowrap">Submit for Free Review →</a>
+    </div>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">Choosing Paper Stock and Finish</h2>
+    <p class="text-slate leading-relaxed mb-4">
+      Once your file is ready, stock selection is your next decision. The standard for professional cards is <strong class="text-ink">16pt coated stock</strong> — it feels substantial without being rigid. For premium brands, 18pt with soft-touch matte lamination is increasingly the choice: the velvety texture communicates quality before someone reads a word.
+    </p>
+    <p class="text-slate leading-relaxed mb-6">
+      For finishes: gloss is the most economical and makes colors pop. Matte reads as modern and sophisticated but shows fingerprints. Spot UV (glossy coating applied selectively over matte) adds visual drama and is particularly effective on dark background designs.
+    </p>
+
+    <h2 class="font-display text-3xl text-ink mb-6 mt-10">What Does It Cost to Print Business Cards?</h2>
+    <p class="text-slate leading-relaxed mb-4">Cost varies significantly by printing method, quantity, and stock. Here's a realistic comparison for 500 standard cards:</p>
+    <div class="overflow-x-auto mb-3">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-ink text-paper">
+            <th class="text-left px-4 py-3 font-semibold">Printer Type</th>
+            <th class="text-left px-4 py-3 font-semibold">500 Cards</th>
+            <th class="text-left px-4 py-3 font-semibold">Stock</th>
+            <th class="text-left px-4 py-3 font-semibold">Turnaround</th>
+            <th class="text-left px-4 py-3 font-semibold">Best For</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-ink/10">
+          {[
+            { type: "Vistaprint", price: "$20–$35", stock: "14pt", turn: "8–12 days", best: "Budget, basic" },
+            { type: "Gotprint", price: "$28–$45", stock: "16pt", turn: "7–12 days", best: "Quality online" },
+            { type: "FedEx Office", price: "$55–$85", stock: "14pt", turn: "Same day", best: "Emergency only" },
+            { type: "Staples", price: "$45–$75", stock: "14pt", turn: "1–2 days", best: "Convenience" },
+            { type: "Local printer (CRST)", price: "$40–$65", stock: "16pt", turn: "1–3 days", best: "Quality + speed" },
+          ].map((r, i) => (
+            <tr class={i % 2 === 0 ? "bg-white" : "bg-paper"}>
+              <td class="px-4 py-3 font-medium text-ink">{r.type}</td>
+              <td class="px-4 py-3 text-slate">{r.price}</td>
+              <td class="px-4 py-3 text-slate">{r.stock}</td>
+              <td class="px-4 py-3 text-slate">{r.turn}</td>
+              <td class="px-4 py-3 text-slate">{r.best}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-muted text-xs mb-4">Prices represent typical ranges for 500 standard single-sided cards, standard finish. February 2026.</p>
+    <p class="text-slate text-sm leading-relaxed mb-6">
+      For deeper dives on each option: <a href="/vistaprint-business-cards/" class="text-gold hover:underline">Vistaprint review</a> · <a href="/gotprint-business-cards/" class="text-gold hover:underline">Gotprint review</a> · <a href="/fedex-business-card-printing/" class="text-gold hover:underline">FedEx Office review</a> · <a href="/staples-business-card-printing/" class="text-gold hover:underline">Staples review</a>
+    </p>
+
+    <!-- CTA 2 -->
+    <div class="bg-ink text-paper rounded-sm p-6 my-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <p class="font-display text-xl text-paper mb-1">Get exact pricing for your job</p>
+        <p class="text-muted text-sm">CRST quotes within 1 business day. 16pt stock, 1–3 day turnaround, Hudson Valley pickup available.</p>
+      </div>
+      <a href="/get-a-quote/" class="flex-shrink-0 bg-gold text-ink px-6 py-3 rounded-sm font-semibold text-sm hover:bg-gold-light transition-colors whitespace-nowrap">Get a Free Quote →</a>
+    </div>
+
+    <h2 class="font-display text-2xl text-ink mb-4 mt-10">More Business Card Guides</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      {[
+        { title: "Business Card Printing: The Complete Guide", url: "/" },
+        { title: "Vistaprint Business Cards: Honest Review", url: "/vistaprint-business-cards/" },
+        { title: "Gotprint Business Cards Review", url: "/gotprint-business-cards/" },
+        { title: "Staples Business Card Printing", url: "/staples-business-card-printing/" },
+      ].map(({ title, url }) => (
+        <a href={url} class="border border-ink/10 rounded-sm px-4 py-3 text-sm text-ink hover:border-gold/40 hover:text-gold transition-all bg-white">
+          {title} →
+        </a>
+      ))}
+    </div>
+
+    <!-- FAQ — visible for AI extraction -->
+    <h2 class="font-display text-3xl text-ink mb-6 mt-12">Frequently Asked Questions</h2>
+    <div class="space-y-4 mb-8">
+      {[
+        {
+          q: "What size should business cards be?",
+          a: "Standard North American business card size is 3.5 inches wide by 2 inches tall. When setting up your file, add 0.125\" bleed on all sides, making the total document size 3.75\" x 2.25\". Keep all text and logos at least 0.125\" inside the trim line (the safe zone)."
+        },
+        {
+          q: "What resolution do business cards need?",
+          a: "Business card files should be set at 300 DPI minimum. Files below 300 DPI print blurry. Export as PDF/X-1a or PDF/X-4 format in CMYK color mode. Never submit RGB files to a press — automatic conversion shifts colors noticeably."
+        },
+        {
+          q: "What is bleed on a business card?",
+          a: "Bleed is the area of your design that extends beyond the trim line — 0.125\" on all sides. It ensures background colors and images print edge-to-edge without white borders appearing after cutting. If your design has a colored background, always extend it to the bleed line."
+        },
+        {
+          q: "Should I use CMYK or RGB for business cards?",
+          a: "Always use CMYK for business card printing. RGB is the color mode for screens. When an RGB file goes to press, it's automatically converted to CMYK — and the conversion typically shifts colors, especially blues, purples, and oranges. Design in CMYK from the start to avoid surprises."
+        },
+      ].map(({ q, a }) => (
+        <div class="border border-ink/10 rounded-sm p-5 bg-white">
+          <h3 class="font-semibold text-ink mb-2 text-sm">{q}</h3>
+          <p class="text-slate text-sm leading-relaxed">{a}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Author E-E-A-T box -->
+    <div class="bg-ink text-paper rounded-sm p-6 flex flex-col sm:flex-row gap-5 items-start mt-8">
+      <div class="flex-shrink-0 w-14 h-14 bg-gold/20 rounded-sm flex items-center justify-center">
+        <span class="font-display text-gold text-xl font-bold">C</span>
+      </div>
+      <div>
+        <p class="font-semibold text-paper mb-1">Written by CRST — Cornerstone Services</p>
+        <p class="text-muted text-sm leading-relaxed">Direct mail and printing specialists serving the Hudson Valley since 2008. All file specification guidance reflects current industry standards for commercial offset and digital printing.</p>
+        <div class="flex gap-4 mt-3 text-xs">
+          <a href="https://crst.net" class="text-gold hover:underline" target="_blank" rel="noopener">crst.net →</a>
+          <a href="/editorial-policy/" class="text-gold hover:underline">Editorial Policy →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6 pt-6 border-t border-ink/10 text-xs text-muted">
+      <p>Written by <a href="https://crst.net" class="text-gold hover:underline" target="_blank" rel="noopener">CRST</a> — direct mail &amp; printing specialists, Hudson Valley NY. File specs reflect current commercial print standards. See our <a href="/editorial-policy/" class="text-gold hover:underline">editorial policy</a>.</p>
+    </div>
+  </article>
+
+  <LeadForm
+    heading="Ready to Print? Get a Quote from CRST"
+    subheading="Submit your file or get a free design review. Hudson Valley pickup available."
+  />
+
+</Base>

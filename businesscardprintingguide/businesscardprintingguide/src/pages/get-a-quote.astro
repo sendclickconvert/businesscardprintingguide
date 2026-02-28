@@ -1,0 +1,119 @@
+---
+import Base from '../layouts/Base.astro';
+import LeadForm from '../components/LeadForm.astro';
+
+const breadcrumbs = [
+  { name: "Business Card Printing Guide", url: "https://www.businesscardprintingguide.com" },
+  { name: "Get a Quote", url: "https://www.businesscardprintingguide.com/get-a-quote/" }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": "https://www.businesscardprintingguide.com/get-a-quote/#contactpage",
+  "name": "Get a Free Business Card Quote — CRST Printing, Hudson Valley NY",
+  "description": "Request a free business card printing quote from CRST. Serving Ulster, Dutchess, and Orange Counties. 1–3 day turnaround, free design review, local pickup available.",
+  "url": "https://www.businesscardprintingguide.com/get-a-quote/",
+  "mainEntity": {
+    "@type": "LocalBusiness",
+    "@id": "https://crst.net/#business"
+  }
+};
+---
+
+<Base
+  title="Get a Free Business Card Quote — CRST Printing, Hudson Valley NY"
+  description="Request a free business card printing quote from CRST. Serving Ulster, Dutchess, and Orange Counties. 1–3 day turnaround, free design review, local pickup available."
+  schema={schema}
+  breadcrumbs={breadcrumbs}
+>
+
+  <section class="bg-ink text-paper pt-14 pb-12">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <p class="text-gold text-xs font-semibold uppercase tracking-widest mb-3">Free · No Obligation · 1 Business Day Response</p>
+      <h1 class="font-display text-4xl md:text-5xl mb-4">Get Your Free<br/><span class="text-gold italic">Business Card Quote</span></h1>
+      <p class="text-muted text-lg max-w-xl mx-auto leading-relaxed">
+        Tell us what you need. CRST serves Hudson Valley businesses with professional printing, free design review, and 1–3 day local turnaround.
+      </p>
+    </div>
+  </section>
+
+  <!-- Trust signals -->
+  <section class="bg-paper border-b border-ink/10 py-6">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm">
+        {[
+          { icon: "🏡", label: "Hudson Valley Local" },
+          { icon: "⚡", label: "1–3 Day Turnaround" },
+          { icon: "✍️", label: "Free Design Review" },
+          { icon: "📦", label: "Local Pickup Available" },
+        ].map(({ icon, label }) => (
+          <div class="flex flex-col items-center gap-1">
+            <span class="text-2xl">{icon}</span>
+            <span class="font-medium text-ink text-xs">{label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Form (compact mode — light background) -->
+  <section class="max-w-2xl mx-auto px-4 py-12">
+    <LeadForm
+      heading="Request Your Quote"
+      subheading="Fill out the form below and we'll respond within 1 business day with pricing and options."
+      compact={true}
+    />
+  </section>
+
+  <!-- What happens next -->
+  <section class="max-w-4xl mx-auto px-4 pb-16">
+    <h2 class="font-display text-2xl text-ink mb-6 text-center">What Happens Next</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {[
+        { step: "1", title: "We review your request", body: "Usually within a few hours. If you have a file, we'll check it for print-readiness at no charge." },
+        { step: "2", title: "We send pricing options", body: "Clear pricing for your quantity, stock, and finish. No hidden fees or surprise upsells." },
+        { step: "3", title: "Approve and print", body: "Confirm your order and we go to press. Most orders are ready for pickup or delivery in 1–3 days." },
+      ].map(({ step, title, body }) => (
+        <div class="text-center p-6 border border-ink/10 rounded-sm bg-white">
+          <div class="w-10 h-10 bg-gold rounded-full flex items-center justify-center text-ink font-bold font-mono mx-auto mb-3">{step}</div>
+          <h3 class="font-semibold text-ink mb-2">{title}</h3>
+          <p class="text-slate text-sm leading-relaxed">{body}</p>
+        </div>
+      ))}
+    </div>
+    <p class="text-center text-xs text-muted mt-6">Serving Ulster County, Dutchess County, Orange County, and surrounding Hudson Valley area. <a href="https://crst.net" class="text-gold hover:underline" target="_blank" rel="noopener">Learn more about CRST →</a></p>
+    <div class="mt-8 max-w-2xl mx-auto">
+      <h2 class="font-display text-2xl text-ink mb-4">Common Questions</h2>
+      <div class="space-y-3">
+        {[
+          { q: "How fast can CRST turn around business cards?", a: "Standard turnaround is 1–3 business days. Rush orders may be available depending on quantity and spec — mention your deadline in the project notes and we'll confirm." },
+          { q: "Do I need a print-ready file or can CRST design the card?", a: "Both. If you have a file ready (PDF, AI, or Canva export), we'll review it before printing at no charge. If you need design help, mention that in the project notes." },
+          { q: "What areas does CRST serve?", a: "CRST is based in New Paltz, NY and serves Ulster County, Dutchess County, and Orange County throughout the Hudson Valley. Local pickup is available." },
+        ].map(({ q, a }) => (
+          <div class="border border-ink/10 rounded-sm p-4 bg-white">
+            <p class="font-semibold text-ink text-sm mb-1">{q}</p>
+            <p class="text-slate text-sm leading-relaxed">{a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+      <div class="flex-shrink-0 w-10 h-10 bg-gold/20 rounded-sm flex items-center justify-center">
+        <span class="font-display text-gold font-bold">C</span>
+      </div>
+      <div class="text-xs text-muted">
+        <p class="text-paper font-semibold mb-1">CRST — Cornerstone Services, Hudson Valley NY</p>
+        <p>Direct mail and printing specialists since 2008. New Paltz, NY. Serving Ulster, Dutchess, and Orange Counties. All quote requests are reviewed by our production team within 1 business day. See our <a href="/about/" class="text-gold hover:underline">About page</a> and <a href="/editorial-policy/" class="text-gold hover:underline">editorial policy</a>.</p>
+        <div class="mt-3 flex flex-wrap gap-3 pt-3 border-t border-white/10">
+          <a href="/" class="text-gold hover:underline">Business Card Guide</a>
+          <a href="/vistaprint-business-cards/" class="text-gold hover:underline">Vistaprint Review</a>
+          <a href="/gotprint-business-cards/" class="text-gold hover:underline">Gotprint Review</a>
+          <a href="/print-business-cards/" class="text-gold hover:underline">How to Print Cards</a>
+          <a href="/fedex-business-card-printing/" class="text-gold hover:underline">FedEx Review</a>
+          <a href="/staples-business-card-printing/" class="text-gold hover:underline">Staples Review</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Base>

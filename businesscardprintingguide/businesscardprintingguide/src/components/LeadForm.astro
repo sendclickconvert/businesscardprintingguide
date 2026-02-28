@@ -1,0 +1,104 @@
+---
+export interface Props {
+  heading?: string;
+  subheading?: string;
+  compact?: boolean;
+}
+
+const {
+  heading = "Get a Free Business Card Quote",
+  subheading = "Local printing. Professional quality. Fast turnaround. Serving Hudson Valley businesses.",
+  compact = false,
+} = Astro.props;
+---
+
+<section class={compact ? "py-8" : "py-14 bg-ink"} id="quote-form">
+  <div class="max-w-2xl mx-auto px-4">
+    {!compact && (
+      <div class="text-center mb-8">
+        <p class="text-gold text-xs font-semibold uppercase tracking-widest mb-2">Powered by CRST</p>
+        <h2 class="font-display text-3xl text-paper mb-3">{heading}</h2>
+        <p class="text-muted text-base">{subheading}</p>
+      </div>
+    )}
+    {compact && (
+      <h3 class="font-display text-2xl text-ink mb-2">{heading}</h3>
+      <p class="text-slate text-sm mb-6">{subheading}</p>
+    )}
+
+    <!-- ============================================================
+         GHL FORM EMBED — RELIABLE ATTRIBUTION METHOD
+
+         ATTRIBUTION SETUP (do this in GHL before embedding):
+
+         1. STATIC HIDDEN FIELDS — set default values in GHL form builder:
+              Lead Source  → default value: businesscardprintingguide.com
+              Lead Type    → default value: EMD Organic
+              Campaign     → default value: business-cards-hub
+
+         2. NATIVE UTM CAPTURE — enable in GHL (no custom JS needed):
+            Settings → Business Info → Integrations → Enable UTM Tracking
+            GHL auto-captures utm_source, utm_medium, utm_campaign from URL.
+
+         3. GET EMBED CODE:
+            Sites → Forms → [EMD Business Card Quote] → Integrate
+            Paste the iframe below, replacing the placeholder form.
+
+         4. TEST: Submit test lead → check GHL CRM → confirm fields populated.
+
+         WARNING: Do NOT use JS to inject values into the GHL iframe.
+         Cross-origin restrictions make this unreliable. Use GHL native
+         hidden field defaults + UTM capture instead.
+         ============================================================ -->
+
+    <div
+      id="ghl-form-container"
+      class={compact
+        ? "bg-paper border border-gold/20 rounded-sm p-6"
+        : "bg-paper rounded-sm p-8"}
+    >
+
+      <!-- PLACEHOLDER FORM — replace with GHL iframe when ready -->
+      <form name="quote-placeholder" class="space-y-4" onsubmit="return false;">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate uppercase tracking-wider mb-1.5">First Name</label>
+            <input type="text" placeholder="Jane" class="w-full border border-ink/20 rounded-sm px-3 py-2.5 text-sm bg-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate uppercase tracking-wider mb-1.5">Last Name</label>
+            <input type="text" placeholder="Smith" class="w-full border border-ink/20 rounded-sm px-3 py-2.5 text-sm bg-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate uppercase tracking-wider mb-1.5">Business Email</label>
+          <input type="email" placeholder="jane@yourbusiness.com" class="w-full border border-ink/20 rounded-sm px-3 py-2.5 text-sm bg-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate uppercase tracking-wider mb-1.5">Phone</label>
+          <input type="tel" placeholder="(845) 555-0100" class="w-full border border-ink/20 rounded-sm px-3 py-2.5 text-sm bg-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate uppercase tracking-wider mb-1.5">Quantity Needed</label>
+          <select class="w-full border border-ink/20 rounded-sm px-3 py-2.5 text-sm bg-white focus:outline-none focus:border-gold transition-colors">
+            <option value="">Select quantity...</option>
+            <option>250 cards</option>
+            <option>500 cards</option>
+            <option>1,000 cards</option>
+            <option>2,500+ cards</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate uppercase tracking-wider mb-1.5">Tell Us About Your Project</label>
+          <textarea rows="3" placeholder="Stock preference, finish, turnaround time, design needs..." class="w-full border border-ink/20 rounded-sm px-3 py-2.5 text-sm bg-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors resize-none"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-gold text-ink py-3 px-6 rounded-sm font-semibold text-sm hover:bg-gold-light transition-colors tracking-wide">
+          Request My Free Quote →
+        </button>
+        <p class="text-center text-xs text-muted">No obligation. Response within 1 business day.</p>
+      </form>
+      <!-- END PLACEHOLDER FORM -->
+
+    </div>
+  </div>
+</section>

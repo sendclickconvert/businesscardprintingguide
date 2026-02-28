@@ -1,0 +1,344 @@
+---
+import Base from '../layouts/Base.astro';
+import LeadForm from '../components/LeadForm.astro';
+
+const breadcrumbs = [
+  { name: "Business Card Printing Guide", url: "https://www.businesscardprintingguide.com" },
+  { name: "Staples Business Card Printing", url: "https://www.businesscardprintingguide.com/staples-business-card-printing/" }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Review",
+      "@id": "https://www.businesscardprintingguide.com/staples-business-card-printing/#review",
+      "name": "Staples Business Card Printing Review (2026)",
+      "description": "Staples business cards reviewed — in-store pickup, online ordering, pricing vs Vistaprint and local printers, quality assessment.",
+      "author": { "@type": "Organization", "name": "CRST", "url": "https://crst.net" },
+      "dateModified": "2026-02-01",
+      "datePublished": "2026-02-01",
+      "itemReviewed": {
+        "@type": "Product",
+        "name": "Staples Business Card Printing",
+        "brand": { "@type": "Brand", "name": "Staples" }
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "3.3",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.businesscardprintingguide.com/staples-business-card-printing/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does Staples charge for business card printing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Staples business card pricing typically runs $20–$30 for 250 cards through their online ordering system, and $35–$60 for in-store same-day pickup. Prices vary by stock choice, finish, and whether you're ordering online or in-store."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does Staples take to print business cards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Staples offers same-day and next-day in-store pickup for business cards at most locations. Online orders ship in 5–8 business days. Same-day availability depends on store capacity — call ahead to confirm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Staples or Vistaprint better for business cards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vistaprint is generally cheaper and has a better online design tool. Staples has the advantage of in-store same-day pickup without a FedEx Office premium. For quality and value, dedicated online printers like Gotprint outperform both. For local businesses needing fast turnaround with professional results, a local print shop is the best option."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get business cards printed at Staples same day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, most Staples locations offer same-day business card printing when orders are placed in the morning. Availability varies by store — call your local Staples print center to confirm before placing an urgent order."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Base
+  title="Staples Business Card Printing: Honest Review, Pricing & Alternatives (2026)"
+  description="Staples business cards honestly reviewed — in-store pickup, online vs in-store pricing, quality vs Vistaprint and local printers. Find out when Staples makes sense and when it doesn't."
+  schema={schema}
+  breadcrumbs={breadcrumbs}
+>
+
+  <div class="bg-paper border-b border-ink/10">
+    <div class="max-w-4xl mx-auto px-4 py-2 text-xs text-muted flex items-center gap-2">
+      <a href="/" class="hover:text-gold transition-colors">Business Card Printing Guide</a>
+      <span>→</span>
+      <span class="text-ink">Staples Business Card Printing</span>
+    </div>
+  </div>
+
+  <section class="bg-ink text-paper pt-12 pb-16 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, #c9a84c 0, #c9a84c 1px, transparent 0, transparent 50%); background-size: 12px 12px;"></div>
+    <div class="max-w-4xl mx-auto px-4 relative z-10">
+      <p class="text-gold text-xs font-semibold uppercase tracking-widest mb-3">Spoke Guide · Printer Review</p>
+      <h1 class="font-display text-4xl md:text-5xl leading-tight mb-4">
+        Staples Business Card Printing:<br/><span class="text-gold italic">Is It Worth It? (2026)</span>
+      </h1>
+      <p class="text-muted text-lg max-w-2xl leading-relaxed">
+        Staples sits between Vistaprint and FedEx Office — cheaper than FedEx, with in-store pickup that Vistaprint can't match. Here's what that actually means for your next order.
+      </p>
+      <div class="flex flex-wrap gap-4 text-sm mt-6">
+        <div class="bg-white/10 border border-white/20 rounded-sm px-4 py-2 text-paper">⭐ 3.3 / 5</div>
+        <div class="bg-white/10 border border-white/20 rounded-sm px-4 py-2 text-paper">📋 Updated February 2026</div>
+        <div class="bg-white/10 border border-white/20 rounded-sm px-4 py-2 text-paper">⏱ 7 min read</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Takeaways — visible for AI extraction -->
+  <section class="max-w-4xl mx-auto px-4 -mt-6 relative z-10">
+    <div class="bg-paper border border-gold/30 rounded-sm p-6 shadow-lg">
+      <h2 class="font-display text-xl text-ink mb-4 flex items-center gap-2">
+        <span class="w-6 h-6 bg-gold rounded-sm flex items-center justify-center text-ink text-xs font-bold">✓</span>
+        Key Takeaways
+      </h2>
+      <ul class="space-y-2 text-sm text-slate">
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Staples online orders run $20–$30 for 250 cards. In-store same-day pickup runs $35–$60 — more than online, less than FedEx Office.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Same-day in-store pickup is available at most locations — the main reason to choose Staples over Vistaprint.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Stock is limited to 14pt coated — no 16pt, no soft-touch lamination, no specialty finishes at most locations.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Online ordering at Staples.com uses a template designer — useful for first-timers, limiting for brand-specific work.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Quality is comparable to Vistaprint on 14pt stock — adequate for basic use, not suitable for brand-sensitive first impressions.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Hudson Valley businesses: CRST delivers 16pt cards in 1–3 days with free file review at comparable in-store pickup pricing.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CTA 1 — early page -->
+  <div class="max-w-4xl mx-auto px-4 mt-6">
+    <div class="border border-gold/30 rounded-sm p-4 bg-paper flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-sm text-slate">Hudson Valley business? Skip the Staples markup — <strong class="text-ink">CRST prints 16pt cards in 1–3 days with local pickup.</strong></p>
+      <a href="/get-a-quote/" class="flex-shrink-0 bg-gold text-ink px-5 py-2 rounded-sm text-sm font-semibold hover:bg-gold-light transition-colors">Get a Free Quote →</a>
+    </div>
+  </div>
+
+  <article class="max-w-4xl mx-auto px-4 py-12">
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-4">What Is Staples Business Card Printing?</h2>
+    <p class="text-slate leading-relaxed mb-4">
+      Staples is a national office supply retailer with over 1,000 U.S. locations, most of which include a print center. Their business card service runs through two channels: online ordering at Staples.com (shipped to your door or available for in-store pickup) and in-store direct ordering at the print counter.
+    </p>
+    <p class="text-slate leading-relaxed mb-6">
+      Staples targets the same convenience market as <a href="/fedex-business-card-printing/" class="text-gold hover:underline">FedEx Office</a> but at a slightly lower price point. Like FedEx, their primary selling point is physical accessibility — you can walk into a Staples today and have cards tomorrow. Unlike dedicated print shops or online-only printers like <a href="/gotprint-business-cards/" class="text-gold hover:underline">Gotprint</a>, Staples is not a print specialist. Their print services are a department within a retail store, which shapes both the product range and the quality ceiling. For a full comparison of all options including costs and turnaround, see our <a href="/print-business-cards/" class="text-gold hover:underline">complete business card printing guide</a>.
+    </p>
+
+    <h2 class="font-display text-3xl text-ink mb-6 mt-10">Staples Business Card Pricing (2026)</h2>
+    <div class="overflow-x-auto mb-3">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-ink text-paper">
+            <th class="text-left px-4 py-3 font-semibold">Quantity</th>
+            <th class="text-left px-4 py-3 font-semibold">Online Order</th>
+            <th class="text-left px-4 py-3 font-semibold">In-Store Pickup</th>
+            <th class="text-left px-4 py-3 font-semibold">Turnaround</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-ink/10">
+          {[
+            { qty: "250 cards", online: "$20–$28", store: "$35–$55", time: "Online: 5–8 days / Store: same day" },
+            { qty: "500 cards", online: "$28–$40", store: "$50–$75", time: "Online: 5–8 days / Store: 1–2 days" },
+            { qty: "1,000 cards", online: "$40–$65", store: "$80–$120", time: "Online: 5–8 days / Store: 2–3 days" },
+          ].map((r, i) => (
+            <tr class={i % 2 === 0 ? "bg-white" : "bg-paper"}>
+              <td class="px-4 py-3 font-medium text-ink">{r.qty}</td>
+              <td class="px-4 py-3 text-slate">{r.online}</td>
+              <td class="px-4 py-3 text-slate">{r.store}</td>
+              <td class="px-4 py-3 text-slate text-xs">{r.time}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-muted text-xs mb-8">Pricing sourced from Staples.com and in-store quotes, February 2026. Prices vary by location and product configuration.</p>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">Staples Online vs. In-Store: What's the Difference?</h2>
+    <p class="text-slate leading-relaxed mb-4">
+      Staples runs two distinct ordering experiences that produce different results:
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+      <div class="border border-ink/10 rounded-sm p-5 bg-white">
+        <h3 class="font-semibold text-ink mb-3">Online at Staples.com</h3>
+        <ul class="space-y-1.5 text-slate text-sm">
+          <li class="flex items-start gap-2"><span class="text-gold">·</span> Template-based design tool — similar to Vistaprint's</li>
+          <li class="flex items-start gap-2"><span class="text-gold">·</span> Lowest pricing tier</li>
+          <li class="flex items-start gap-2"><span class="text-gold">·</span> Shipped to door in 5–8 business days</li>
+          <li class="flex items-start gap-2"><span class="text-gold">·</span> Free in-store pickup option on some products</li>
+          <li class="flex items-start gap-2"><span class="text-gold">·</span> More stock and finish options than in-store</li>
+        </ul>
+      </div>
+      <div class="border border-ink/10 rounded-sm p-5 bg-white">
+        <h3 class="font-semibold text-ink mb-3">In-Store Print Center</h3>
+        <ul class="space-y-1.5 text-slate text-sm">
+          <li class="flex items-start gap-2"><span class="text-gold">·</span> Walk in with a file or use in-store design assist</li>
+          <li class="flex items-start gap-2"><span class="text-gold">·</span> Same-day or next-day pickup</li>
+          <li class="flex items-start gap-2"><span class="text-gold">·</span> Higher price point than online ordering</li>
+          <li class="flex items-start gap-2"><span class="text-gold">·</span> Limited stock options — typically 14pt gloss only</li>
+          <li class="flex items-start gap-2"><span class="text-gold">·</span> Quality varies significantly by location and staff</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="font-display text-3xl text-ink mb-6 mt-10">How Does Staples Compare to the Alternatives?</h2>
+    <div class="overflow-x-auto mb-3">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-ink text-paper">
+            <th class="text-left px-4 py-3 font-semibold">Factor</th>
+            <th class="text-left px-4 py-3 font-semibold">Staples</th>
+            <th class="text-left px-4 py-3 font-semibold">Vistaprint</th>
+            <th class="text-left px-4 py-3 font-semibold">FedEx Office</th>
+            <th class="text-left px-4 py-3 font-semibold text-gold">Local Printer (CRST)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-ink/10">
+          {[
+            { f: "Price (250 cards)", s: "$20–$55", v: "$18–$25", fed: "$35–$55", local: "$65–$90" },
+            { f: "Same-day pickup", s: "✓ Yes", v: "✗ No", fed: "✓ Yes", local: "✓ 1–3 days" },
+            { f: "Base stock", s: "14pt", v: "14pt", fed: "14pt", local: "16pt ✓" },
+            { f: "Premium finishes", s: "Limited", v: "Add-on", fed: "Very limited", local: "Full range" },
+            { f: "Design tool", s: "Template only", v: "Template only", fed: "Basic", local: "File review incl." },
+            { f: "Color accuracy", s: "Inconsistent", v: "Inconsistent", fed: "Inconsistent", local: "Consistent ✓" },
+            { f: "Best for", s: "Budget same-day", v: "Budget, first-timer", fed: "Emergency", local: "Quality + speed" },
+          ].map((r, i) => (
+            <tr class={i % 2 === 0 ? "bg-white" : "bg-paper"}>
+              <td class="px-4 py-3 font-medium text-ink">{r.f}</td>
+              <td class="px-4 py-3 text-slate">{r.s}</td>
+              <td class="px-4 py-3 text-slate">{r.v}</td>
+              <td class="px-4 py-3 text-slate">{r.fed}</td>
+              <td class="px-4 py-3 text-slate font-medium text-ink">{r.local}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-muted text-xs mb-8">Pricing and specs verified February 2026.</p>
+
+    <!-- CTA 2 — mid-page -->
+    <div class="bg-ink text-paper rounded-sm p-6 my-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <p class="font-display text-xl text-paper mb-1">Better than Staples. Faster than you think.</p>
+        <p class="text-muted text-sm">CRST prints on 16pt stock with 1–3 day Hudson Valley turnaround. Free file review on every order.</p>
+      </div>
+      <a href="/get-a-quote/" class="flex-shrink-0 bg-gold text-ink px-6 py-3 rounded-sm font-semibold text-sm hover:bg-gold-light transition-colors whitespace-nowrap">Get a Free Quote →</a>
+    </div>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">Where Staples Falls Short on Quality</h2>
+    <p class="text-slate leading-relaxed mb-4">
+      The core quality issue with Staples is stock weight. Their standard business card stock is 14pt coated — the same as Vistaprint's base offering, which is noticeably thinner than the 16pt industry standard used by dedicated print shops. When you hand a 14pt card to someone who handles a lot of cards, it reads as lightweight.
+    </p>
+    <p class="text-slate leading-relaxed mb-4">
+      Color consistency is a second concern. Staples' print equipment is maintained for general office printing across a high-volume retail environment — not calibrated for precision color matching. If your brand has specific Pantone or CMYK values, Staples in-store printing isn't the right channel.
+    </p>
+    <p class="text-slate leading-relaxed mb-6">
+      In-store quality also varies significantly by location. Unlike a dedicated print shop where the equipment and staff are focused solely on print production, Staples employees manage print jobs alongside general retail duties. This creates inconsistency that dedicated printers — local or online — don't have.
+    </p>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">When Staples Makes Sense</h2>
+    <div class="space-y-3 mb-8">
+      {[
+        { num: "01", title: "Budget same-day cards", body: "If you need cards today and cost is the primary constraint, Staples in-store pickup is cheaper than FedEx Office for the same-day convenience. It's a legitimate trade-off for low-stakes use cases." },
+        { num: "02", title: "Template-designed first orders", body: "For small business owners ordering business cards for the first time without a designer or an existing file, Staples.com's online template tool works well enough for basic orders shipped to your door." },
+        { num: "03", title: "Supplementary or secondary cards", body: "Team members who hand out cards infrequently, or secondary cards for specific campaigns, where cost per card matters more than impression quality." },
+      ].map(({ num, title, body }) => (
+        <div class="flex gap-5 p-5 bg-white border border-ink/10 rounded-sm">
+          <div class="flex-shrink-0 font-mono text-3xl font-bold text-gold/30 leading-none">{num}</div>
+          <div>
+            <h3 class="font-semibold text-ink mb-1">{title}</h3>
+            <p class="text-slate text-sm leading-relaxed">{body}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">When to Choose Something Better</h2>
+    <ul class="space-y-2 text-slate text-sm mb-8 ml-4">
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">→</span> You have 24+ hours and care about quality — local printer or Gotprint both outperform Staples at similar or lower cost</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">→</span> Your card is a brand touchpoint at high-value meetings — 14pt stock from a retail printer isn't the right first impression</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">→</span> You need premium finishes — soft-touch, spot UV, rounded corners, or foil aren't available at Staples</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">→</span> Color matching matters — Staples can't guarantee Pantone or CMYK accuracy</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">→</span> You're ordering 1,000+ cards — volume pricing at online printers or a local shop is significantly better</li>
+    </ul>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">The Hudson Valley Alternative to Staples</h2>
+    <p class="text-slate leading-relaxed mb-4">
+      For Hudson Valley businesses — across Ulster, Dutchess, and Orange Counties — CRST fills the gap that neither Staples nor online printers can. Local pickup in New Paltz with 1–3 day turnaround means you're not waiting 8 days for an online order or overpaying for retail convenience.
+    </p>
+    <p class="text-slate leading-relaxed mb-6">
+      The practical difference: CRST prints on 16pt stock as standard, reviews every file before it hits press, and matches Pantone colors. You get professional print shop output at pricing that competes directly with Staples' in-store rates — without the retail markup for the convenience.
+    </p>
+
+    <!-- FAQ — visible text, no accordion -->
+    <h2 class="font-display text-3xl text-ink mb-6 mt-10">Frequently Asked Questions</h2>
+    <div class="space-y-4 mb-10">
+      {[
+        {
+          q: "How much does Staples charge for business card printing?",
+          a: "Staples business card pricing runs $20–$28 for 250 cards through online ordering, and $35–$55 for in-store same-day pickup. Prices vary by stock, finish, and ordering channel. In-store pricing is higher than online but still less than FedEx Office."
+        },
+        {
+          q: "How long does Staples take to print business cards?",
+          a: "In-store same-day pickup is available at most Staples locations when you order before noon. Online orders through Staples.com ship in 5–8 business days. For urgent needs, call your local store to confirm same-day availability before placing the order."
+        },
+        {
+          q: "Is Staples or Vistaprint better for business cards?",
+          a: "Vistaprint is cheaper for online orders and has a more polished design tool. Staples has the advantage of in-store same-day pickup. For quality, dedicated online printers like Gotprint outperform both on stock weight and color accuracy. For local businesses that need fast turnaround with professional results, a local print shop is the best option."
+        },
+        {
+          q: "Can I get business cards printed at Staples same day?",
+          a: "Yes. Most Staples print centers offer same-day business cards when orders are placed in the morning, typically before noon. Call your local store's print center before ordering to confirm availability — same-day capacity varies by location."
+        },
+      ].map(({ q, a }) => (
+        <div class="border border-ink/10 rounded-sm p-5 bg-white">
+          <h3 class="font-semibold text-ink mb-2 text-sm">{q}</h3>
+          <p class="text-slate text-sm leading-relaxed">{a}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Internal links -->
+    <h2 class="font-display text-2xl text-ink mb-4 mt-10">More Business Card Guides</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
+      {[
+        { title: "Business Card Printing: The Complete Guide", url: "/" },
+        { title: "Vistaprint Business Cards: Honest Review", url: "/vistaprint-business-cards/" },
+        { title: "Gotprint Business Cards Review", url: "/gotprint-business-cards/" },
+        { title: "How to Print Business Cards: File Setup", url: "/print-business-cards/" },
+        { title: "FedEx Business Card Printing", url: "/fedex-business-card-printing/" },
+      ].map(({ title, url }) => (
+        <a href={url} class="border border-ink/10 rounded-sm px-4 py-3 text-sm text-ink hover:border-gold/40 hover:text-gold transition-all bg-white">
+          {title} →
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-10 pt-6 border-t border-ink/10 text-xs text-muted">
+      <p>Written by <a href="https://crst.net" class="text-gold hover:underline" target="_blank" rel="noopener">CRST</a> — direct mail &amp; printing specialists, Hudson Valley NY (New Paltz, serving Ulster, Dutchess &amp; Orange Counties). Pricing verified February 2026 from Staples.com and in-store quotes. See our <a href="/editorial-policy/" class="text-gold hover:underline">editorial policy</a>.</p>
+    </div>
+  </article>
+
+  <!-- CTA 3 — LeadForm at bottom -->
+  <LeadForm
+    heading="Better Cards Than Staples. Same-Day Hudson Valley Pickup."
+    subheading="CRST prints on 16pt coated stock with 1–3 day turnaround. Free file review on every order. Serving New Paltz, Kingston, Poughkeepsie, Newburgh and all of Hudson Valley."
+  />
+
+</Base>

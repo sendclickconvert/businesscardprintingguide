@@ -1,0 +1,92 @@
+---
+import Base from '../layouts/Base.astro';
+
+const breadcrumbs = [
+  { name: "Business Card Printing Guide", url: "https://www.businesscardprintingguide.com" },
+  { name: "Editorial Policy", url: "https://www.businesscardprintingguide.com/editorial-policy/" }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.businesscardprintingguide.com/editorial-policy/#webpage",
+  "name": "Editorial Policy — Business Card Printing Guide",
+  "description": "How BusinessCardPrintingGuide.com produces, reviews, and updates content. Our standards for accuracy, conflict of interest disclosure, and comparison methodology.",
+  "url": "https://www.businesscardprintingguide.com/editorial-policy/"
+};
+---
+
+<Base
+  title="Editorial Policy — Business Card Printing Guide"
+  description="How we produce, review, and update content. Our standards for accuracy, conflict of interest disclosure, and comparison methodology."
+  schema={schema}
+  breadcrumbs={breadcrumbs}
+>
+
+  <section class="bg-ink text-paper pt-12 pb-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-gold text-xs font-semibold uppercase tracking-widest mb-3">Transparency</p>
+      <h1 class="font-display text-4xl md:text-5xl leading-tight mb-4">
+        Editorial <span class="text-gold italic">Policy</span>
+      </h1>
+      <p class="text-muted text-lg max-w-2xl">How we write, review, and update content on this site.</p>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 py-12 prose-slate">
+
+    <h2 class="font-display text-3xl text-ink mb-4">Who Produces This Content</h2>
+    <p class="text-slate leading-relaxed mb-6">
+      All content on BusinessCardPrintingGuide.com is produced by the team at CRST (Cornerstone Services), a direct mail and printing company based in New Paltz, NY. Content draws on direct operational experience running print jobs, quoting customers, and managing production across business cards, postcards, EDDM, and large format work since 2008.
+    </p>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">How We Research and Write</h2>
+    <p class="text-slate leading-relaxed mb-4">Guides and reviews on this site follow a consistent process:</p>
+
+    <div class="space-y-4 mb-8">
+      {[
+        { step: "Pricing verification", body: "All pricing ranges are sourced directly from printer websites and verified at time of writing. We include a last-verified date on pricing tables. Online printer pricing changes frequently — if you find a discrepancy, let us know." },
+        { step: "Turnaround data", body: "Turnaround times are based on advertised production windows plus standard shipping estimates. Rush availability is noted where confirmed." },
+        { step: "Quality assessments", body: "Stock and quality assessments reflect CRST's direct experience handling print samples, customer returns, and production comparisons. We do not accept free samples from vendors in exchange for coverage." },
+        { step: "Comparison methodology", body: "When comparing online printers to local alternatives, we use equivalent specifications: same quantity, same stock weight, same finish type. We note where a fair comparison isn't possible due to product differences." },
+      ].map(({ step, body }) => (
+        <div class="border-l-2 border-gold pl-5">
+          <p class="font-semibold text-ink mb-1">{step}</p>
+          <p class="text-slate text-sm leading-relaxed">{body}</p>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">Conflict of Interest Disclosure</h2>
+    <p class="text-slate leading-relaxed mb-4">
+      This site is produced by CRST, a local printing company that competes directly with some of the vendors reviewed here. We are transparent about this. Our commercial interest is in local print work — specifically customers in Ulster, Dutchess, and Orange Counties who need a reliable local printer.
+    </p>
+    <p class="text-slate leading-relaxed mb-6">
+      Where an online printer is the right answer for a given use case, we say so explicitly. We do not inflate the weaknesses of competitors or overstate the advantages of local printing for cases where it genuinely doesn't apply.
+    </p>
+    <p class="text-slate leading-relaxed mb-6">
+      This site does not currently participate in affiliate programs with any of the printers reviewed. If that changes, it will be disclosed clearly on any page that carries an affiliate relationship.
+    </p>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">Update Policy</h2>
+    <p class="text-slate leading-relaxed mb-6">
+      Pricing, turnaround times, and product availability change. We review and update articles on a quarterly basis. The <code class="text-gold bg-ink/5 px-1 rounded text-sm">dateModified</code> field in each article's metadata reflects the last substantive update. If you find outdated information, contact us via the <a href="/get-a-quote/" class="text-gold hover:underline">quote form</a> with "correction" in the message field.
+    </p>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">Corrections</h2>
+    <p class="text-slate leading-relaxed mb-6">
+      We correct factual errors promptly. Corrections are noted at the bottom of the affected article with a brief explanation of what changed and when.
+    </p>
+
+    <div class="mt-10 pt-6 border-t border-ink/10 text-xs text-muted">
+      <p>Questions about this policy? Contact CRST via <a href="/get-a-quote/" class="text-gold hover:underline">the quote form</a>. See also our <a href="/about/" class="text-gold hover:underline">About page</a> and <a href="/privacy/" class="text-gold hover:underline">Privacy Policy</a>.</p>
+
+    <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <a href="/" class="border border-ink/10 rounded-sm px-4 py-3 text-sm text-ink hover:border-gold/40 hover:text-gold transition-all bg-white text-center">Read the Business Card Printing Guide →</a>
+      <a href="/get-a-quote/" class="bg-gold text-ink px-4 py-3 rounded-sm text-sm font-semibold hover:bg-gold-light transition-colors text-center">Get a Free Quote from CRST →</a>
+    </div>
+    </div>
+
+  </article>
+
+</Base>

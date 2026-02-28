@@ -1,0 +1,92 @@
+---
+import Base from '../layouts/Base.astro';
+
+const breadcrumbs = [
+  { name: "Business Card Printing Guide", url: "https://www.businesscardprintingguide.com" },
+  { name: "Privacy Policy", url: "https://www.businesscardprintingguide.com/privacy/" }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.businesscardprintingguide.com/privacy/#webpage",
+  "name": "Privacy Policy — Business Card Printing Guide",
+  "description": "Privacy policy for BusinessCardPrintingGuide.com. How we collect, use, and protect your information.",
+  "url": "https://www.businesscardprintingguide.com/privacy/"
+};
+
+const lastUpdated = "February 2026";
+---
+
+<Base
+  title="Privacy Policy — Business Card Printing Guide"
+  description="Privacy policy for BusinessCardPrintingGuide.com. How we collect, use, and protect your information when you visit this site or submit a quote request."
+  schema={schema}
+  breadcrumbs={breadcrumbs}
+>
+
+  <section class="bg-ink text-paper pt-12 pb-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-gold text-xs font-semibold uppercase tracking-widest mb-3">Legal</p>
+      <h1 class="font-display text-4xl md:text-5xl leading-tight mb-4">
+        Privacy <span class="text-gold italic">Policy</span>
+      </h1>
+      <p class="text-muted">Last updated: {lastUpdated}</p>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 py-12">
+
+    <p class="text-slate leading-relaxed mb-8">
+      This Privacy Policy describes how BusinessCardPrintingGuide.com, operated by Cornerstone Services (CRST), New Paltz, NY, collects and uses information when you visit this site or submit a quote request.
+    </p>
+
+    <h2 class="font-display text-2xl text-ink mb-3">Information We Collect</h2>
+    <p class="text-slate leading-relaxed mb-3"><strong class="text-ink">Quote form submissions.</strong> When you submit a quote request, we collect your name, email address, phone number, and any project details you provide. This information is processed through GoHighLevel CRM and used solely to respond to your inquiry.</p>
+    <p class="text-slate leading-relaxed mb-3"><strong class="text-ink">Usage data.</strong> We collect standard web analytics data including pages visited, time on site, referring URL, browser type, and general geographic location (country/region level). This is collected via Google Analytics and used to improve site content.</p>
+    <p class="text-slate leading-relaxed mb-6"><strong class="text-ink">Cookies.</strong> This site uses cookies for analytics purposes. No advertising cookies are set. You can disable cookies in your browser settings without affecting your ability to use this site.</p>
+
+    <h2 class="font-display text-2xl text-ink mb-3 mt-8">How We Use Your Information</h2>
+    <p class="text-slate leading-relaxed mb-3">Information collected via the quote form is used to:</p>
+    <ul class="space-y-1 text-slate text-sm mb-6 ml-4">
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5">·</span> Respond to your printing inquiry</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5">·</span> Provide pricing and turnaround estimates</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5">·</span> Follow up on your project if you become a CRST customer</li>
+    </ul>
+    <p class="text-slate leading-relaxed mb-6">We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+
+    <h2 class="font-display text-2xl text-ink mb-3 mt-8">Third-Party Services</h2>
+    <p class="text-slate leading-relaxed mb-3">This site uses the following third-party services:</p>
+    <ul class="space-y-1 text-slate text-sm mb-6 ml-4">
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5">·</span> <strong class="text-ink">Google Analytics</strong> — website usage analytics. <a href="https://policies.google.com/privacy" class="text-gold hover:underline" target="_blank" rel="noopener">Google Privacy Policy →</a></li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5">·</span> <strong class="text-ink">GoHighLevel (CRST Web)</strong> — CRM and form processing. Data is stored in GoHighLevel's US-based infrastructure.</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5">·</span> <strong class="text-ink">Cloudflare</strong> — site hosting and CDN. <a href="https://www.cloudflare.com/privacypolicy/" class="text-gold hover:underline" target="_blank" rel="noopener">Cloudflare Privacy Policy →</a></li>
+    </ul>
+
+    <h2 class="font-display text-2xl text-ink mb-3 mt-8">Data Retention</h2>
+    <p class="text-slate leading-relaxed mb-6">
+      Quote form submissions are retained in CRST's CRM for up to 2 years. Analytics data is retained per Google Analytics default settings (26 months). You may request deletion of your personal data by contacting us via the <a href="/get-a-quote/" class="text-gold hover:underline">quote form</a>.
+    </p>
+
+    <h2 class="font-display text-2xl text-ink mb-3 mt-8">Your Rights</h2>
+    <p class="text-slate leading-relaxed mb-6">
+      You may request access to, correction of, or deletion of any personal information we hold about you. To make a request, contact us via the <a href="/get-a-quote/" class="text-gold hover:underline">quote form</a> with "Privacy Request" in the message field.
+    </p>
+
+    <h2 class="font-display text-2xl text-ink mb-3 mt-8">Changes to This Policy</h2>
+    <p class="text-slate leading-relaxed mb-6">
+      We may update this policy periodically. The "last updated" date at the top of this page reflects the most recent revision. Continued use of the site after changes constitutes acceptance of the updated policy.
+    </p>
+
+    <h2 class="font-display text-2xl text-ink mb-3 mt-8">Contact</h2>
+    <p class="text-slate leading-relaxed mb-6">
+      Cornerstone Services (CRST) · New Paltz, NY 12561 · <a href="/get-a-quote/" class="text-gold hover:underline">Contact form</a> · <a href="https://crst.net" class="text-gold hover:underline" target="_blank" rel="noopener">crst.net</a>
+    </p>
+
+    <div class="mt-10 pt-6 border-t border-ink/10 text-xs text-muted">
+      <p>See also: <a href="/about/" class="text-gold hover:underline">About</a> · <a href="/editorial-policy/" class="text-gold hover:underline">Editorial Policy</a></p>
+    </div>
+
+  </article>
+
+</Base>

@@ -1,0 +1,314 @@
+---
+import Base from '../layouts/Base.astro';
+import LeadForm from '../components/LeadForm.astro';
+
+const breadcrumbs = [
+  { name: "Business Card Printing Guide", url: "https://www.businesscardprintingguide.com" },
+  { name: "Gotprint Business Cards", url: "https://www.businesscardprintingguide.com/gotprint-business-cards/" }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Review",
+      "@id": "https://www.businesscardprintingguide.com/gotprint-business-cards/#review",
+      "name": "Gotprint Business Cards Review (2026)",
+      "description": "Gotprint offers better quality than Vistaprint at similar prices. We review paper stock, turnaround, pricing, and when a local printer is the better choice.",
+      "author": { "@type": "Organization", "name": "CRST", "url": "https://crst.net" },
+      "dateModified": "2026-02-01",
+      "datePublished": "2026-02-01",
+      "itemReviewed": {
+        "@type": "Product",
+        "name": "Gotprint Business Cards",
+        "brand": { "@type": "Brand", "name": "Gotprint" }
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.1",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.businesscardprintingguide.com/gotprint-business-cards/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Gotprint better than Vistaprint for business cards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For quality, yes. Gotprint uses heavier stock options, offers more finish choices, and produces more consistent color output than Vistaprint. Pricing is comparable. The trade-off is a less polished ordering interface and slightly slower shipping on some products."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does Gotprint take to ship business cards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gotprint standard production takes 3-5 business days, with shipping adding 3-7 days depending on location and method. Total turnaround is typically 7-12 business days. Rush production options are available for an additional fee."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What paper stock does Gotprint use for business cards?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gotprint offers 14pt and 16pt coated stock as standard options, with 18pt available as an upgrade. They also offer uncoated stock and specialty options including soft-touch lamination. The 16pt option is their most popular and matches the industry standard."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Base
+  title="Gotprint Business Cards Review (2026) — Quality, Pricing & Honest Assessment"
+  description="Gotprint offers better quality than Vistaprint at similar prices. We review paper stock options, turnaround times, pricing, and when a local printer is the smarter choice."
+  schema={schema}
+  breadcrumbs={breadcrumbs}
+>
+
+
+  <!-- CTA 1 Top banner SQEG min 3 CTAs per page -->
+  <div class="bg-gold/10 border-b border-gold/20">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm">
+      <p class="text-slate">Hudson Valley business? CRST prints <strong class="text-ink">16pt cards in 1-3 days</strong> with local pickup - free file review included.</p>
+      <a href="/get-a-quote/" class="flex-shrink-0 bg-ink text-paper px-4 py-1.5 rounded-sm text-xs font-semibold hover:bg-gold hover:text-ink transition-colors whitespace-nowrap">Get a Free Quote</a>
+    </div>
+  </div>
+
+  <div class="bg-paper border-b border-ink/10">
+    <div class="max-w-4xl mx-auto px-4 py-2 text-xs text-muted flex items-center gap-2">
+      <a href="/" class="hover:text-gold transition-colors">Business Card Printing Guide</a>
+      <span>→</span>
+      <span class="text-ink">Gotprint Business Cards</span>
+    </div>
+  </div>
+
+  <section class="bg-ink text-paper pt-12 pb-16 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(45deg, #c9a84c 0, #c9a84c 1px, transparent 0, transparent 50%); background-size: 12px 12px;"></div>
+    <div class="max-w-4xl mx-auto px-4 relative z-10">
+      <p class="text-gold text-xs font-semibold uppercase tracking-widest mb-3">Spoke Guide · Printer Review</p>
+      <h1 class="font-display text-4xl md:text-5xl leading-tight mb-4">
+        Gotprint Business Cards:<br/><span class="text-gold italic">Honest Review (2026)</span>
+      </h1>
+      <p class="text-muted text-lg max-w-2xl leading-relaxed">
+        The online printer that designers actually recommend. Better stock, better color output — at prices that compete directly with Vistaprint.
+      </p>
+      <div class="flex flex-wrap gap-4 text-sm mt-6">
+        <div class="bg-white/10 border border-white/20 rounded-sm px-4 py-2 text-paper">⭐ 4.1 / 5</div>
+        <div class="bg-white/10 border border-white/20 rounded-sm px-4 py-2 text-paper">📋 Updated February 2026</div>
+        <div class="bg-white/10 border border-white/20 rounded-sm px-4 py-2 text-paper">⏱ 7 min read</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Takeaways -->
+  <section class="max-w-4xl mx-auto px-4 -mt-6 relative z-10">
+    <div class="bg-paper border border-gold/30 rounded-sm p-6 shadow-lg">
+      <h2 class="font-display text-xl text-ink mb-4 flex items-center gap-2">
+        <span class="w-6 h-6 bg-gold rounded-sm flex items-center justify-center text-ink text-xs font-bold">✓</span>
+        Key Takeaways
+      </h2>
+      <ul class="space-y-2 text-sm text-slate">
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Gotprint is consistently ranked above Vistaprint for quality by print designers — heavier stock, better color accuracy, more finish options.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> 16pt stock is available as standard (not an upgrade), which matches the industry standard most professional printers use.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Pricing is comparable to Vistaprint — 250 cards run $22–$40 depending on stock and finish.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> The ordering interface is less polished than Vistaprint — expect to upload your own print-ready file rather than use a design tool.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> Turnaround is 7–12 business days including shipping — no rush option for next-day delivery.</li>
+        <li class="flex items-start gap-2"><span class="text-gold mt-0.5">→</span> For Hudson Valley businesses needing rush turnaround or custom finishes: CRST delivers in 1–3 days with local pickup.</li>
+      </ul>
+    </div>
+  </section>
+
+  <article class="max-w-4xl mx-auto px-4 py-12">
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-8">What Gotprint Is</h2>
+    <p class="text-slate leading-relaxed mb-4">
+      Gotprint is a commercial online printing company that has built a loyal following among graphic designers and small businesses who want better print quality than <a href="/vistaprint-business-cards/" class="text-gold hover:underline">Vistaprint</a> without paying local printer prices. They operate as a wholesale-style printer — less retail polish, more production focus — which is exactly what experienced buyers prefer.
+    </p>
+    <p class="text-slate leading-relaxed mb-6">
+      Unlike Vistaprint, Gotprint doesn't push you through a design tool or template library. They expect you to upload a print-ready file. If you're not sure how to prepare one, our <a href="/print-business-cards/" class="text-gold hover:underline">business card file setup guide</a> covers every spec you need — bleed, resolution, color mode, and export settings. That's a barrier for first-timers but a feature for anyone who works with a designer or knows their way around Illustrator or Canva's PDF export.
+    </p>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">Where Gotprint Beats Vistaprint</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+      {[
+        { title: "Stock weight", body: "Gotprint's base business card stock is 16pt — the industry standard. Vistaprint defaults to 14pt and charges extra to upgrade. This difference is immediately noticeable when you hold both cards." },
+        { title: "Color accuracy", body: "Gotprint's color output is more consistent run-to-run. Their printing process calibrates more tightly than Vistaprint's gang-run approach, which matters for brand color matching." },
+        { title: "Finish options", body: "Both matte and gloss are available, plus soft-touch lamination and spot UV as upgrades. More choice than Vistaprint's base offerings without the aggressive upsell flow." },
+        { title: "File control", body: "You supply the file, they print it. No template interference, no forced design review. If your file is print-ready, Gotprint delivers exactly what you designed." },
+      ].map(({ title, body }) => (
+        <div class="border border-ink/10 rounded-sm p-5 bg-white">
+          <h3 class="font-semibold text-ink mb-2 flex items-center gap-2">
+            <span class="w-5 h-5 bg-gold/20 rounded-sm flex items-center justify-center text-gold text-xs">✓</span>
+            {title}
+          </h3>
+          <p class="text-slate text-sm leading-relaxed">{body}</p>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">Where Gotprint Falls Short</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+      {[
+        { title: "Ordering interface", body: "The website is functional but dated. Finding the right product, configuring options, and uploading files takes more effort than Vistaprint or most modern online printers." },
+        { title: "No design tool", body: "If you don't have a print-ready file, Gotprint isn't the right choice. There's no built-in designer. You'll need to use Canva, Adobe, or work with a designer first." },
+        { title: "Customer service", body: "Response times on support tickets can be slow — 24–48 hours is common. For time-sensitive orders or file issues, this creates risk." },
+        { title: "No same-day or next-day option", body: "Rush production is available but doesn't guarantee next-day delivery. If you need cards within 48–72 hours, a local printer is your only reliable option." },
+      ].map(({ title, body }) => (
+        <div class="border border-ink/10 rounded-sm p-5 bg-white">
+          <h3 class="font-semibold text-ink mb-2 flex items-center gap-2">
+            <span class="w-5 h-5 bg-red-50 rounded-sm flex items-center justify-center text-red-500 text-xs">✗</span>
+            {title}
+          </h3>
+          <p class="text-slate text-sm leading-relaxed">{body}</p>
+        </div>
+      ))}
+    </div>
+
+    <h2 class="font-display text-3xl text-ink mb-6 mt-10">Gotprint Business Card Pricing (2026)</h2>
+    <div class="overflow-x-auto mb-3">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-ink text-paper">
+            <th class="text-left px-4 py-3 font-semibold">Quantity</th>
+            <th class="text-left px-4 py-3 font-semibold">14pt Gloss</th>
+            <th class="text-left px-4 py-3 font-semibold">16pt Matte</th>
+            <th class="text-left px-4 py-3 font-semibold">Soft-Touch</th>
+            <th class="text-left px-4 py-3 font-semibold">Turnaround</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-ink/10">
+          {[
+            { qty: "250", g: "$18–$24", m: "$22–$30", st: "$35–$48", t: "7–10 days" },
+            { qty: "500", g: "$24–$32", m: "$30–$40", st: "$48–$65", t: "7–10 days" },
+            { qty: "1,000", g: "$34–$48", m: "$44–$58", st: "$68–$90", t: "7–10 days" },
+            { qty: "2,500", g: "$65–$90", m: "$80–$110", st: "$130–$170", t: "8–12 days" },
+          ].map((r, i) => (
+            <tr class={i % 2 === 0 ? "bg-white" : "bg-paper"}>
+              <td class="px-4 py-3 font-medium text-ink">{r.qty} cards</td>
+              <td class="px-4 py-3 text-slate">{r.g}</td>
+              <td class="px-4 py-3 text-slate">{r.m}</td>
+              <td class="px-4 py-3 text-slate">{r.st}</td>
+              <td class="px-4 py-3 text-slate">{r.t}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="text-muted text-xs mb-6">Prices sourced from Gotprint.com, February 2026. Excludes shipping ($8–$18 standard). Subject to change.</p>
+
+    <!-- CTA 2 — mid-page after pricing -->
+    <div class="bg-paper border-l-4 border-gold px-6 py-4 mb-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+      <div>
+        <p class="font-semibold text-ink text-sm">Hudson Valley business? Get a local quote instead.</p>
+        <p class="text-muted text-xs mt-0.5">CRST matches Gotprint pricing with 1–3 day turnaround. No shipping wait.</p>
+      </div>
+      <a href="/get-a-quote/" class="flex-shrink-0 bg-gold text-ink px-5 py-2 rounded-sm font-semibold text-sm hover:bg-gold-light transition-colors whitespace-nowrap">Get a Quote →</a>
+    </div>
+
+    <h2 class="font-display text-3xl text-ink mb-6 mt-10">Gotprint vs. Vistaprint: Head-to-Head</h2>
+    <div class="overflow-x-auto mb-8">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-ink text-paper">
+            <th class="text-left px-4 py-3 font-semibold">Factor</th>
+            <th class="text-left px-4 py-3 font-semibold">Gotprint</th>
+            <th class="text-left px-4 py-3 font-semibold">Vistaprint</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-ink/10">
+          {[
+            { factor: "Base stock weight", g: "16pt ✓", v: "14pt" },
+            { factor: "Color consistency", g: "More consistent", v: "Variable" },
+            { factor: "Design tool", g: "None — upload your file", v: "Built-in designer" },
+            { factor: "Soft-touch finish", g: "Available", v: "Add-on (expensive)" },
+            { factor: "Pricing (250 cards)", g: "$22–$30", v: "$18–$25" },
+            { factor: "Turnaround", g: "7–12 days", v: "8–12 days" },
+            { factor: "Rush availability", g: "Limited", v: "Available (costly)" },
+            { factor: "Best for", g: "Designers, quality-focused", v: "Budget, first-timers" },
+          ].map((r, i) => (
+            <tr class={i % 2 === 0 ? "bg-white" : "bg-paper"}>
+              <td class="px-4 py-3 font-medium text-ink">{r.factor}</td>
+              <td class="px-4 py-3 text-slate">{r.g}</td>
+              <td class="px-4 py-3 text-slate">{r.v}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">Who Should Use Gotprint</h2>
+    <p class="text-slate leading-relaxed mb-4">Gotprint is the right choice when:</p>
+    <ul class="space-y-2 text-slate text-sm mb-6 ml-4">
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">✓</span> You have a print-ready file from a designer or created it yourself in Illustrator or Canva</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">✓</span> You want 16pt stock without paying an upgrade fee</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">✓</span> Color accuracy matters and you've been burned by Vistaprint's inconsistency before</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">✓</span> You're ordering 500+ cards and want the best value at volume</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">✓</span> You have 2+ weeks before you need the cards</li>
+    </ul>
+
+    <h2 class="font-display text-3xl text-ink mb-4 mt-10">When to Skip Gotprint</h2>
+    <ul class="space-y-2 text-slate text-sm mb-8 ml-4">
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">→</span> You need cards within a week — shipping timelines make rush orders risky</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">→</span> You don't have a designed file ready — you'll need Vistaprint's template tool or a designer first</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">→</span> You want to hold a physical proof before committing — online printers don't offer this</li>
+      <li class="flex items-start gap-2"><span class="text-gold mt-0.5 font-bold">→</span> You need specialty work: foil stamping, die-cut shapes, spot UV on dark backgrounds — local printer territory</li>
+    </ul>
+
+    <!-- Inline CTA -->
+    <div class="bg-ink text-paper rounded-sm p-6 my-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <p class="font-display text-xl text-paper mb-1">Need cards faster than Gotprint can deliver?</p>
+        <p class="text-muted text-sm">CRST turns orders around in 1–3 days with Hudson Valley pickup. Free file review included.</p>
+      </div>
+      <a href="/get-a-quote/" class="flex-shrink-0 bg-gold text-ink px-6 py-3 rounded-sm font-semibold text-sm hover:bg-gold-light transition-colors whitespace-nowrap">Get a Free Quote →</a>
+    </div>
+
+    <!-- FAQ -->
+    <h2 class="font-display text-3xl text-ink mb-6 mt-10">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      {[
+        { q: "Is Gotprint better than Vistaprint for business cards?", a: "For quality, yes. Gotprint uses heavier stock options, offers more finish choices, and produces more consistent color output than Vistaprint. Pricing is comparable. The trade-off is a less polished ordering interface — you'll need to upload your own file rather than use a built-in design tool." },
+        { q: "How long does Gotprint take to ship business cards?", a: "Standard production takes 3–5 business days. Shipping adds 3–7 days depending on your location and the shipping method selected. Total turnaround is typically 7–12 business days from order to delivery." },
+        { q: "What paper stock does Gotprint use?", a: "Gotprint offers 14pt and 16pt coated stock as standard options, with 18pt available as an upgrade. They also offer uncoated stock and specialty options including soft-touch lamination. The 16pt option is their most popular and matches the professional standard." },
+      ].map(({ q, a }) => (
+        <div class="border border-ink/10 rounded-sm p-5 bg-white">
+          <h3 class="font-semibold text-ink mb-2 text-sm">{q}</h3>
+          <p class="text-slate text-sm leading-relaxed">{a}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Internal Links -->
+    <h2 class="font-display text-2xl text-ink mb-4 mt-12">More Business Card Guides</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      {[
+        { title: "Business Card Printing: The Complete Guide", url: "/" },
+        { title: "Vistaprint Business Cards: Honest Review", url: "/vistaprint-business-cards/" },
+        { title: "How to Print Business Cards: File Setup Guide", url: "/print-business-cards/" },
+        { title: "FedEx Business Card Printing", url: "/fedex-business-card-printing/" },
+        { title: "Staples Business Card Printing", url: "/staples-business-card-printing/" },
+      ].map(({ title, url }) => (
+        <a href={url} class="border border-ink/10 rounded-sm px-4 py-3 text-sm text-ink hover:border-gold/40 hover:text-gold transition-all bg-white">
+          {title} →
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-10 pt-6 border-t border-ink/10 text-xs text-muted">
+      <p>Written by <a href="https://crst.net" class="text-gold hover:underline" target="_blank" rel="noopener">CRST</a> — direct mail &amp; printing specialists, Hudson Valley NY. Pricing verified February 2026. See our <a href="/editorial-policy/" class="text-gold hover:underline">editorial policy</a>.</p>
+    </div>
+  </article>
+
+  <LeadForm
+    heading="Local Quality, Faster Than Gotprint"
+    subheading="CRST prints on 16pt stock with 1–3 day turnaround. Free file review. Serving Hudson Valley businesses."
+  />
+
+</Base>
